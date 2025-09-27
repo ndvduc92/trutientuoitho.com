@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>🌳 Rung Cây Nhận Thưởng</title>
+  <style>
+    body {
+      background: #eef6f9;
+      text-align: center;
+      margin-top: 50px;
+      font-family: sans-serif;
+      transition: 0.2s;
+    }
+
+    .shake-screen {
+      animation: screenShake 0.4s;
+    }
+
+    @keyframes screenShake {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(10px, -10px); }
+      50% { transform: translate(-10px, 10px); }
+      75% { transform: translate(10px, 10px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .tree-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tree {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 🌟 Lấp lánh */
+    .sparkle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 250px;
+      pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+      background-repeat: no-repeat;
+      background-size: 25px 25px;
+      animation: sparkle 2s infinite ease-in-out;
+      z-index: 2;
+    }
+
+    @keyframes sparkle {
+      0%, 100% {
+        background-position: 30% 10%;
+        opacity: 0.2;
+      }
+      50% {
+        background-position: 70% 90%;
+        opacity: 0.7;
+      }
+    }
+
+    /* 🌈 Tia sáng quay */
+    .aura {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+      animation: rotateAura 5s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotateAura {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* 🌳 Rung cây */
+    .tree.shake {
+      animation: shake 0.5s;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* 🎁 Vật phẩm rơi */
+    .reward {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      animation: drop 1s ease-out forwards;
+      z-index: 3;
+    }
+
+    @keyframes drop {
+      0% { top: 0; opacity: 1; }
+      100% { top: 200px; opacity: 0; }
+    }
+
+    /* 📝 Thông báo */
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .message img {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌳 Rung Cây Nhận Vật Phẩm</h1>
+  <div class="tree-container" onclick="shakeTree()">
+    <div class="aura"></div>        <!-- 🌈 Tia sáng xoay quanh cây -->
+    <div class="sparkle"></div>     <!-- ✨ Lấp lánh -->
+    <img src="https://trutienorigin.com/statics/images/rungcay/bg-tree.png" alt="Cây" class="tree" id="tree">
+    <div id="reward-area"></div>
+  </div>
+
+  <div class="message" id="message"></div>
+
+  <!-- 🔊 Âm thanh -->
+  <audio id="ding-sound" src="./static/ding.mp3" preload="auto"></audio>
+
+  <script>
+    const rewards = [
+      { image: 'https://cdn-icons-png.flaticon.com/512/254/254425.png', percent: 30 },  // Coin
+      { image: 'https://cdn-icons-png.flaticon.com/512/188/188987.png', percent: 20 },  // Chest
+      { image: 'https://cdn-icons-png.flaticon.com/512/2107/2107957.png', percent: 15 }, // Heart
+      { image: 'https://cdn-icons-png.flaticon.com/512/555/555646.png', percent: 10 },  // Diamond
+      { image: 'https://cdn-icons-png.flaticon.com/512/3523/3523887.png', percent: 5 },  // Key ⭐
+      { image: 'https://cdn-icons-png.flaticon.com/512/2769/2769233.png', percent: 5 },  // Magic Potion ⭐
+      { image: 'https://cdn-icons-png.flaticon.com/512/3176/3176290.png', percent: 5 },  // Scroll ⭐
+      { image: 'https://cdn-icons-png.flaticon.com/512/953/953920.png', percent: 4 },    // Ring ⭐
+      { image: 'https://cdn-icons-png.flaticon.com/512/2889/2889676.png', percent: 3 },  // Sword ⭐
+      { image: 'https://cdn-icons-png.flaticon.com/512/3135/3135706.png', percent: 3 }   // Armor ⭐
+    ];
+
+    function getRandomReward() {
+      const total = rewards.reduce((sum, item) => sum + item.percent, 0);
+      const rand = Math.random() * total;
+      let cumulative = 0;
+
+      for (let i = 0; i < rewards.length; i++) {
+        cumulative += rewards[i].percent;
+        if (rand < cumulative) return rewards[i];
+      }
+      return rewards[0];
+    }
+
+    function shakeTree() {
+      const tree = document.getElementById('tree');
+      const rewardArea = document.getElementById('reward-area');
+      const message = document.getElementById('message');
+      const ding = document.getElementById('ding-sound');
+      const body = document.body;
+
+      tree.classList.remove('shake');
+      void tree.offsetWidth;
+      tree.classList.add('shake');
+
+      rewardArea.innerHTML = '';
+      message.innerHTML = '';
+
+      const reward = getRandomReward();
+
+      // Phần thưởng rơi
+      const rewardImg = document.createElement('img');
+      rewardImg.src = reward.image;
+      rewardImg.className = 'reward';
+      rewardArea.appendChild(rewardImg);
+
+      // Âm thanh
+      ding.currentTime = 0;
+      ding.play();
+
+      // Nếu là vật phẩm hiếm (tỷ lệ <= 5%) => rung màn hình
+      if (reward.percent <= 5) {
+        body.classList.add("shake-screen");
+        setTimeout(() => body.classList.remove("shake-screen"), 400);
+      }
+
+      // Thông báo nhận vật phẩm
+      setTimeout(() => {
+        message.innerHTML = `🎁 Bạn đã nhận được phần thưởng: <img src="${reward.image}" alt="Reward">`;
+      }, 500);
+
+      // Xoá ảnh rơi sau 2s
+      setTimeout(() => {
+        rewardImg.remove();
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

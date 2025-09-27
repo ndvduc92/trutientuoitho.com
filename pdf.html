@@ -1,0 +1,82 @@
+<div id="pdf-card" style="border:1px solid #ddd;border-radius:8px;width:400px;padding:10px;font-family:sans-serif;">
+  <div style="display:flex;align-items:center;margin-bottom:8px;">
+    <div style="width:32px;height:32px;background:#e53935;color:#fff;
+                display:flex;align-items:center;justify-content:center;
+                font-weight:bold;border-radius:4px;margin-right:8px;">
+      PDF
+    </div>
+    <div>
+      <div id="pdf-name" style="font-weight:bold;">sample.pdf</div>
+      <div id="pdf-info" style="font-size:12px;color:#555;">PDF • 1.2 MB</div>
+    </div>
+  </div>
+  
+  <canvas id="pdf-preview" style="width:100%;border:1px solid #eee;border-radius:4px;"></canvas>
+
+  <div style="margin-top:8px;display:flex;gap:8px;">
+    <a href="javascript:void(0)" onclick="openPdf()"
+       style="flex:1;text-align:center;padding:6px 0;background:#1976d2;color:#fff;text-decoration:none;
+              border-radius:4px;font-size:14px;">View</a>
+    <a id="download-btn" href="https://www.aeee.in/wp-content/uploads/2020/08/Sample-pdf.pdf" download
+       style="flex:1;text-align:center;padding:6px 0;background:#555;color:#fff;text-decoration:none;
+              border-radius:4px;font-size:14px;">Download</a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="pdf-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+     background:rgba(0,0,0,0.7);z-index:999;align-items:center;justify-content:center;">
+  <div style="background:#fff;padding:16px;border-radius:8px;max-width:90%;max-height:90%;overflow:auto;">
+    <button onclick="closePdf()" style="float:right;padding:4px 8px;">✕</button>
+    <div id="pdf-container"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  const url = "https://www.aeee.in/wp-content/uploads/2020/08/Sample-pdf.pdf"; 
+  const canvas = document.getElementById("pdf-preview");
+  const context = canvas.getContext("2d");
+
+  // Render thumbnail trong card
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      const viewport = page.getViewport({ scale: 0.8 });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+      page.render({ canvasContext: context, viewport });
+    });
+  });
+
+  // Update info file
+  document.getElementById("pdf-name").innerText = "SAMPLE-3.pdf";
+  document.getElementById("pdf-info").innerText = "PDF • 2.5 MB";
+
+  // Mở modal và render PDF nhiều trang
+  function openPdf() {
+    document.getElementById("pdf-modal").style.display = "flex";
+    const container = document.getElementById("pdf-container");
+    container.innerHTML = ""; // clear cũ
+
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+      for (let i = 1; i <= pdf.numPages; i++) {
+        pdf.getPage(i).then(page => {
+          const viewport = page.getViewport({ scale: 1 });
+          const canvas = document.createElement("canvas");
+          canvas.style.display = "block";
+          canvas.style.marginBottom = "12px";
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          container.appendChild(canvas);
+
+          const ctx = canvas.getContext("2d");
+          page.render({ canvasContext: ctx, viewport });
+        });
+      }
+    });
+  }
+
+  function closePdf() {
+    document.getElementById("pdf-modal").style.display = "none";
+  }
+</script>
