@@ -37,14 +37,4 @@ class Faction extends Model
         }
         return $sum;
     }
-
-    public function getAllMember() {
-        $members = [];
-        foreach ($this->families as $item) {
-            foreach ($item->chars as $char) {
-                $members[] = $char->char_id;
-            }
-        }
-        return $members;
-    }
 }

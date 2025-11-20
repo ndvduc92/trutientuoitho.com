@@ -6,5 +6,4 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'hrace009\\PerfectWorldAPI' => array($vendorDir . '/hrace009/perfect-world-api/src'),
 );

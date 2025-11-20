@@ -1,0 +1,180 @@
+%!Adobe-FontList 1.24
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:#9Slide03RobotoSlabLight-Light
+FamilyName:#9Slide03 Roboto Slab Light
+StyleName:Light
+FullName:#9Slide03 Roboto Slab Light Light
+MenuName:#9Slide03 Roboto Slab Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\#9Slide03_Roboto_Slab_Light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:287636
+FileModTime:1509648525
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,#9Slide03 Roboto Slab Light Light
+NameArray:0,Mac,4,#9Slide03 Roboto Slab Light Light
+NameArray:0,Win,1,#9Slide03 Roboto Slab Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:#9Slide03RobotoSlabLight-Light
+FamilyName:#9Slide03 Roboto Slab Light
+StyleName:Light
+FullName:#9Slide03 Roboto Slab Light Light
+MenuName:#9Slide03 Roboto Slab Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\Roboto_Slab_Light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:287636
+FileModTime:1730006674
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,#9Slide03 Roboto Slab Light Light
+NameArray:0,Mac,4,#9Slide03 Roboto Slab Light Light
+NameArray:0,Win,1,#9Slide03 Roboto Slab Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MyriadPro-BoldCond
+FamilyName:Myriad Pro
+StyleName:Bold Condensed
+FullName:MyriadPro-BoldCond
+MenuName:Myriad Pro Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\myriadpro_boldcond.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:113480
+FileModTime:1729869319
+WeightClass:700
+WidthClass:3
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,18,Myriad Pro Bold Cond
+NameArray:0,Mac,4,MyriadPro-BoldCond
+NameArray:0,Win,1,Myriad Pro Cond
+NameArray:0,Win,16,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MyriadPro-Cond
+FamilyName:Myriad Pro
+StyleName:Condensed
+FullName:MyriadPro-Cond
+MenuName:Myriad Pro Cond
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\myriadpro_cond.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:114712
+FileModTime:1729869269
+WeightClass:400
+WidthClass:3
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,18,Myriad Pro Cond
+NameArray:0,Mac,4,MyriadPro-Cond
+NameArray:0,Win,1,Myriad Pro Cond
+NameArray:0,Win,16,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SVN-BigNoodleTitling
+FamilyName:SVN-Big Noodle Titling
+StyleName:Regular
+FullName:SVN-BigNoodleTitling
+MenuName:SVN-Big Noodle Titling
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\svn_big_noodle_titling.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:42256
+FileModTime:1729869389
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,SVN-BigNoodleTitling
+NameArray:0,Win,1,SVN-Big Noodle Titling
+NameArray:0,Win,16,SVN-Big Noodle Titling
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTM-Androgyne
+FamilyName:UTM Androgyne
+StyleName:Regular
+FullName:UTM Androgyne
+MenuName:UTM Androgyne
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\utm_androgyne.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:64260
+FileModTime:1729869369
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,UTM Androgyne
+NameArray:0,Win,1,UTM Androgyne
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTM-Talling
+FamilyName:UTM Talling
+StyleName:Regular
+FullName:UTM Talling
+MenuName:UTM Talling
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\TruTienDesign\TrangChuHonThe\trutienhonthe.com\Font\utm_talling.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:30772
+FileModTime:1729869374
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,UTM Talling
+NameArray:0,Win,1,UTM Talling
+%EndFont
+

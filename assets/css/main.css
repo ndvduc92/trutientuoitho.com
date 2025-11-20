@@ -1,0 +1,2570 @@
+/*---- common ----*/
+@import url("/assets/css/footer.css");
+
+@font-face {
+  font-family: myFont;
+  src: url(/assets/font/Roboto_Slab_Light.ttf);
+}
+
+html, body {
+  font-family: myFont;
+}
+
+.cf:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+
+/*---- basic ----*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+ul, ol {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+html, body {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  /*word-break: break-all;*/
+  background: #fff;
+}
+
+aside, header, nav, section {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+section {
+  padding-top: 35px;
+}
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn {
+  border: initial;
+  border-radius: initial;
+  background-color: initial;
+  transition: initial;
+}
+
+
+.btn.focus, .btn:focus {
+  box-shadow: initial;
+}
+
+.close, .close:hover, .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+  text-shadow: initial;
+  opacity: 1;
+}
+
+.bannerSwiper .swiper-button-next, .bannerSwiper .swiper-button-prev {
+  width: 20px;
+  height: 20px;
+
+}
+
+.bannerSwiper .swiper-button-next {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+
+}
+
+.bannerSwiper .swiper-button-prev {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
+.bannerSwiper .swiper-pagination-bullet {
+  width: 30px;
+  height: 3px;
+  background: #FFF;
+  border-radius: 0;
+}
+
+.bannerSwiper .swiper-slide img {
+  width: 100%;
+}
+
+
+/*---- nav ----*/
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, .1);
+  z-index: 10;
+}
+
+nav .container {
+  position: relative;
+  height: 45px;
+  background: #fff;
+}
+
+.iw_logo {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iw_logo img {
+  width: 250px;
+}
+
+nav .menu {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-left: 70px;
+  text-align: right;
+}
+
+nav ul li a {
+  display: inline;
+  padding-bottom: .3rem;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+  transition: .5s;
+}
+
+nav ul li.active a, nav ul li:hover a {
+  color: #5f89b8;
+  text-decoration: none;
+}
+
+.open_menu, .snslink {
+  display: none;
+}
+
+/*---- header ----*/
+header {
+  position: relative;
+  width: 100%;
+  height: 940px;
+  overflow: hidden;
+}
+
+header .sec_bg {
+  background: url(/assets/bg-top2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.sec_bg, .sec_bg video, .video_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.sec_bg video, .video_bg {
+  object-fit: cover;
+  z-index: 1;
+}
+
+header .container {
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+  margin: 270px auto 0;
+}
+
+.slogan {
+  margin: 0 auto 90px;
+}
+
+.btn_video {
+  position: relative;
+  display: block;
+  transition: .6s;
+  z-index: 2;
+}
+
+.btn_video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate {
+  animation: 3s rotate ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%)rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%)rotate(-360deg);
+  }
+}
+
+
+/*---- main ----*/
+main {
+  position: relative;
+  margin-top: -400px;
+  padding: 400px 0 0;
+  background-size: cover;
+  z-index: 1;
+}
+
+.rewards, .version {
+  padding: 35px 0;
+}
+
+.rewards_list {
+  position: relative;
+  margin-top: -5%;
+  margin-bottom: -15%;
+  width: 100%;
+  text-align: center;
+}
+
+.rewards_icon {
+  position: relative;
+  display: inline-block;
+  margin: 0 26px;
+  width: 20%;
+  cursor: pointer;
+}
+
+.rewards_icon img {
+  display: block;
+}
+
+.rewards_icon.r1, .rewards_icon.r4 {
+  top: -50px;
+}
+
+.rewards_icon.r5, .rewards_icon.r7 {
+  top: -180px;
+}
+
+.rewards_icon.r6 {
+  top: -150px;
+}
+
+.rewards_icon .view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: .5s;
+}
+
+.rewards_icon .view:hover {
+  opacity: 0;
+}
+
+.rewards_icon.r1 {
+  animation: piao 4.2s linear 0.3s infinite;
+}
+
+.rewards_icon.r2 {
+  animation: piao 4.2s linear 1.3s infinite;
+}
+
+.rewards_icon.r3 {
+  animation: piao 4.2s linear .5s infinite;
+}
+
+.rewards_icon.r4 {
+  margin-right: -10px;
+  animation: piao 4.2s linear 2s infinite;
+}
+
+.rewards_icon.r5 {
+  animation: piao 4.2s linear 1.3s infinite;
+}
+
+.rewards_icon.r6 {
+  margin: 0 40px;
+  animation: piao 4.2s linear 2s infinite;
+}
+
+.rewards_icon.r7 {
+  animation: piao 4.2s linear 1.3s infinite;
+}
+
+@keyframes piao {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.rewards_popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 999;
+}
+
+.popup_bg, .rewards_txt {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup_close {
+  position: absolute;
+  top: 50px;
+  right: 120px;
+}
+
+.popup_bg {
+  display: block;
+  max-width: 725px;
+  width: 100%;
+}
+
+.rewards_txt {
+  display: none;
+  /*margin-top: -20px;*/
+  max-width: 350px;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  height: 100%;
+}
+
+.rewards_txt h4 {
+  margin-bottom: 20px;
+  color: #a59775;
+  font-size: 27px;
+  font-weight: 700;
+  margin-top: 20%;
+}
+
+.rewards_txt div {
+  height: 60%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*---- version ----*/
+.version {
+  position: relative;
+  overflow: hidden;
+}
+
+.new_version {
+  position: relative;
+  margin: 0 auto -40px;
+}
+
+.version_content_bg {
+  margin: 0 auto;
+  max-width: 1426px;
+  text-align: center;
+}
+
+.version_content_bg .md, .version_content_bg .mob {
+  display: none;
+}
+
+.version_content {
+  position: absolute;
+  margin-left: -1.5%;
+  max-width: 1000px;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.version_content .nav {
+  margin: 35px auto 5px;
+}
+
+.version_content .nav-link {
+  padding: .5rem;
+}
+
+.version_content .nav-link.active {
+  filter: saturate(.7)hue-rotate(-160deg);
+}
+
+.version_content h3 {
+  color: #ba311f;
+  font-weight: 700;
+  text-align: center;
+}
+
+.v_content {
+  font-size: 17px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+/*---- news_list ----*/
+.news {
+  padding: 35px 0;
+  background-size: cover;
+}
+
+.news_contnet {
+  position: relative;
+  margin: 40px auto;
+  box-shadow: 0px 1px 15px rgba(41, 114, 149, .4);
+}
+
+.news_list {
+  height: 100%;
+  background: url(/assets/news_list_bg.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+#news_list {
+  margin-top: -20px;
+  padding: 15px 18px 0;
+}
+
+.system-more {
+  position: relative;
+}
+
+.system-more .news_title, .system-more .more {
+  position: absolute;
+  display: inline-block;
+  margin-top: -5px;
+  left: 2%;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.system-more .news_title {
+  color: #fff;
+  font-size: 26px;
+  user-select: none;
+}
+
+.system-more .more {
+  margin-top: 0;
+  left: initial;
+  right: 20px;
+  font-size: 20px;
+}
+
+.system-more .more:hover {
+  text-decoration: none;
+}
+
+.system-more .more::after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -2px;
+  width: 20px;
+  height: 20px;
+  background: url(/assets/more_icon.png) no-repeat center top;
+  background-size: cover;
+  transition: .5s;
+}
+
+.system-more .more:hover::after {
+  transform: rotate(180deg);
+}
+
+#news_list ul {
+  list-style: none;
+}
+
+#news_list ul li {
+  display: block;
+  width: 100%;
+}
+
+#news_list ul li a {
+  border-bottom: 1px solid rgba(95, 137, 184, .2);
+  display: block;
+  padding: 12px 0;
+  color: #686c6e;
+  letter-spacing: 0;
+  transition: .5s;
+}
+
+#news_list ul li a:hover {
+  color: #5f89b8;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(199, 234, 255, 1), rgba(199, 234, 255, 0));
+}
+
+#news_list span.system-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: black;
+}
+
+#news_list .systemtime {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  letter-spacing: .5px;
+}
+
+.news_btn {
+  padding: 15px 18px;
+}
+
+.news_btn a img {
+  transition: .5s;
+}
+
+.news_btn a img:hover {
+  filter: brightness(1.1);
+}
+
+.latestnews, .newsdetails {
+  padding: 35px 0;
+  background: url(/assets/news_content_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.latestnews-titleurl {
+  border-bottom: 1px solid rgba(95, 137, 184, .2);
+  display: block;
+  padding: 15px;
+  width: 100%;
+  color: #5c5c5c;
+  transition: .5s;
+}
+
+.latestnews-titleurl:hover {
+  color: #5f89b8;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(199, 234, 255, 1), rgba(199, 234, 255, 0));
+}
+
+.latestnews-title {
+  display: -webkit-box;
+  margin-bottom: 0;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination a {
+  display: inline-block;
+  height: 26px;
+  padding: 0 10px;
+  margin: 0 4px;
+  border: 1px solid #648dbd;
+  color: #648dbd;
+}
+
+.newsdetails-badge, .newsdetails-newsbadge, .newsdetails-sysbadge {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 4px 10px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newsdetails-newsbadge {
+  border: 1px solid #e51737;
+  background: #e51737;
+}
+
+.newsdetails-sysbadge {
+  border: 1px solid #007ac8;
+  background: #007ac8;
+}
+
+.newstime {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: left;
+  opacity: .8;
+}
+
+.morebtn {
+  font-size: 12px;
+  text-align: right;
+}
+
+/*---- news_content ----*/
+.news_banner img {
+  width: 100%;
+}
+
+.newsdetails-title {
+  margin-top: 15px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.newsdetails .newsdetails-titleurl {
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.newsdetails-badge {
+  font-size: 16px;
+}
+
+
+.newsdetails-contents h3 {
+  margin: 1.5rem 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e51737;
+}
+
+.newsdetails-contents {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.newsdetails .newsdetails-contents p {
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.newsdetails .newsdetails-contents a {
+  color: #5f89b8;
+  font-weight: bold;
+}
+
+.newsdetails .backto {
+  margin: 80px 0;
+}
+
+.newsdetails .backto a {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  max-width: 200px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(90deg, #c5b487, #a59775);
+  transition: .5s;
+}
+
+.newsdetails .backto a:hover {
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+/*---- pagination ----*/
+.pagination ul {
+  display: flex;
+  margin: 80px auto 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.pagination ul li a {
+  border: 1px solid #5f89b8;
+  margin: 5px;
+  padding: 12px 17px;
+  color: #5f89b8;
+  font-weight: bold;
+  transition: .5s ease-in-out;
+}
+
+.pagination ul li a:hover, .pagination ul li.active a {
+  border: 1px solid #5f89b8;
+  color: #fff;
+  text-decoration: none;
+  background: #5f89b8;
+}
+
+/*---- menpai ----*/
+.menpai {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.menpai .title {
+  position: relative;
+  z-index: 2;
+}
+
+.chara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.chara_content {
+  display: none;
+}
+
+.chara_content.on {
+  display: block !important;
+}
+
+.menpai .sec_bg video {
+  z-index: 1;
+}
+
+.menpai .sec_bg video, .video_bg {
+  margin-left: -300px;
+}
+
+#chara01 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/tvm.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara02 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/hhp.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara03 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/tat.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara04 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/qvt.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara05 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/qd.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara06 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/phc.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara07 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/cl.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara08 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/ls.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara09 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/hq.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara010 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/thaihao.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara011 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/thienhoa.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara012 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/thanhoang.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara013 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/ac.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara014 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/kc.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara015 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/tl.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara016 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/pq.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara017 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/qv.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara018 .video_bg {
+  background: url(/assets/images/class/char_backgrounds/ha.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+.menpai .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  background: url(/assets/menpai.png) no-repeat center bottom;
+  background-size: cover;
+  z-index: 3;
+}
+
+.chara_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+#chara01 .chara_img {
+  background: url(/assets/images/class/charsv2/tvm.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara02 .chara_img {
+  background: url(/assets/images/class/charsv2/hhp.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara03 .chara_img {
+  background: url(/assets/images/class/charsv2/tat.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara04 .chara_img {
+  background: url(/assets/images/class/charsv2/qvt.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara05 .chara_img {
+  background: url(/assets/images/class/charsv2/qd.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara06 .chara_img {
+  background: url(/assets/images/class/charsv2/phc.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara07 .chara_img {
+  background: url(/assets/images/class/charsv2/ls.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara08 .chara_img {
+  background: url(/assets/images/class/charsv2/cl.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara09 .chara_img {
+  background: url(/assets/images/class/charsv2/thaihao.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara010 .chara_img {
+  background: url(/assets/images/class/charsv2/hq.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara011 .chara_img {
+  background: url(/assets/images/class/charsv2/thienhoa.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara012 .chara_img {
+  background: url(/assets/images/class/charsv2/thanhoang.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara013 .chara_img {
+  background: url(/assets/images/class/charsv2/ac.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara014 .chara_img {
+  background: url(/assets/images/class/charsv2/kc.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara015 .chara_img {
+  background: url(/assets/images/class/charsv2/tl.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara016 .chara_img {
+  background: url(/assets/images/class/charsv2/pq.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara017 .chara_img {
+  background: url(/assets/images/class/charsv2/qv.png) no-repeat right center;
+  background-size: contain;
+}
+
+#chara018 .chara_img {
+  background: url(/assets/images/class/charsv2/ha.png) no-repeat right center;
+  background-size: contain;
+}
+
+.chara_content.on .chara_img {
+  animation: fadeleft .7s forwards;
+}
+
+@keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.chara_img img {
+  width: initial;
+}
+
+.chara_intro {
+  position: absolute;
+  max-width: 580px;
+  left: 50%;
+  bottom: 140px;
+  text-align: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 4;
+}
+
+.chara_content.on .chara_intro {
+  animation: fadeTn .5s forwards;
+  animation-delay: .3s;
+}
+
+@keyframes fadeTn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.chara_intro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 740px;
+  height: 481px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(/assets/chara_intro_shadow.png) no-repeat center top;
+  z-index: -1;
+}
+
+.chara_title {
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.chara_intro p {
+  margin: 20px auto;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.chara_icon {
+  position: absolute;
+  /* max-width: 650px; */
+  width: 100%;
+  bottom: 40px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.chara_icon li {
+  display: inline-block;
+  margin: 0 -2px;
+}
+
+.chara_icon li a {
+  display: block;
+  position: relative;
+  width: 78px;
+  height: 78px;
+}
+
+.chara_icon li:nth-child(1) a {
+  background: url(/assets/images/class/icons/tvm.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(2) a {
+  background: url(/assets/images/class/icons/hhp.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(3) a {
+  background: url(/assets/images/class/icons/tat.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(4) a {
+  background: url(/assets/images/class/icons/qvt.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(5) a {
+  background: url(/assets/images/class/icons/qd.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(6) a {
+  background: url(/assets/images/class/icons/phc.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(7) a {
+  background: url(/assets/images/class/icons/ls.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(8) a {
+  background: url(/assets/images/class/icons/cl.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(9) a {
+  background: url(/assets/images/class/icons/thaihao.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(10) a {
+  background: url(/assets/images/class/icons/hq.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(11) a {
+  background: url(/assets/images/class/icons/thienhoa.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(12) a {
+  background: url(/assets/images/class/icons/thanhoang.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(13) a {
+  background: url(/assets/images/class/icons/ac.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(14) a {
+  background: url(/assets/images/class/icons/kc.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(15) a {
+  background: url(/assets/images/class/icons/tl.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(16) a {
+  background: url(/assets/images/class/icons/pq.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(17) a {
+  background: url(/assets/images/class/icons/qv.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(18) a {
+  background: url(/assets/images/class/icons/ha.png) no-repeat center top;
+  background-size: cover;
+}
+
+
+.chara_icon li.active:nth-child(1) a {
+  background: url(/assets/images/class/icons/tvm_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(2) a {
+  background: url(/assets/images/class/icons/hhp_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(3) a {
+  background: url(/assets/images/class/icons/tat_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(4) a {
+  background: url(/assets/images/class/icons/qvt_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(5) a {
+  background: url(/assets/images/class/icons/qd_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(6) a {
+  background: url(/assets/images/class/icons/phc_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(7) a {
+  background: url(/assets/images/class/icons/ls_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(8) a {
+  background: url(/assets/images/class/icons/cl_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(9) a {
+  background: url(/assets/images/class/icons/thaihao_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(10) a {
+  background: url(/assets/images/class/icons/hq_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(11) a {
+  background: url(/assets/images/class/icons/thienhoa_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(12) a {
+  background: url(/assets/images/class/icons/thanhoang_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(13) a {
+  background: url(/assets/images/class/icons/ac_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(14) a {
+  background: url(/assets/images/class/icons/kc_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(15) a {
+  background: url(/assets/images/class/icons/tl_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(16) a {
+  background: url(/assets/images/class/icons/pq_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(17) a {
+  background: url(/assets/images/class/icons/qv_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(18) a {
+  background: url(/assets/images/class/icons/ha_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+
+
+
+/*---- features ----*/
+.features {
+  position: relative;
+  padding-bottom: 35px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.features .title {
+  margin-bottom: 0;
+}
+
+.app_store {
+  position: relative;
+  margin: 0 auto 50px;
+  max-width: 921px;
+  width: 100%;
+}
+
+.reel {
+  position: relative;
+}
+
+#app_store, #video, .reel_frame {
+  position: absolute;
+  padding: 0 4%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-indicators {
+  bottom: 15px;
+}
+
+.banner .carousel-indicators {
+  bottom: 0;
+}
+
+#video {
+  display: none;
+  overflow: hidden;
+}
+
+#video .btn_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+}
+
+#video:hover .btn_video {
+  transform: translate(-50%, -50%)scale(1.1);
+}
+
+.game_btn {
+  margin: 0 auto 35px;
+  max-width: 625px;
+}
+
+.game_btn img {
+  filter: drop-shadow(0px 12px 16px rgba(0, 0, 0, .6));
+}
+
+.game_btn .btn {
+  padding: 0;
+  transition: .5s;
+}
+
+.game_btn .btn:hover {
+  filter: brightness(1.1);
+}
+
+.role, .flower {
+  position: absolute;
+  width: 100%;
+  bottom: -80px;
+  pointer-events: none;
+}
+
+.role img, .flower img {
+  width: 100%;
+}
+
+/*---- gameinfo ----*/
+.gameinfo {
+  padding: 2rem 0;
+  background: url(/assets/gameinfo_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.gameinfo .icon {
+  margin: 0 auto;
+  max-width: 190px;
+}
+
+.gameinfo h3 {
+  margin: 15px auto;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.gameinfo .game {
+  user-select: none;
+}
+
+.gameinfo p {
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: .5px;
+  color: #b5b5b5;
+}
+
+.gameinfo p span {
+  display: block;
+  margin-top: 15px;
+  color: #dddddb;
+  font-weight: 700;
+}
+
+.gameinfo .customer {
+  margin-bottom: 22px;
+}
+
+.gameinfo .btn {
+  display: block;
+  margin: .25rem;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 20px;
+  background: linear-gradient(90deg, #c5b487, #a59775);
+  transition: .5s;
+}
+
+.gameinfo .btn:hover {
+  filter: brightness(1.1);
+}
+
+/*---- footer ----*/
+footer {
+  color: #000;
+  background: #fff;
+}
+
+footer p, footer ul, footer li {
+  opacity: 1;
+}
+
+footer .company {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 1920px) {
+  main {
+    margin-top: -240px;
+    padding: 200px 0 0;
+  }
+
+  .role, .flower {
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .title {
+    max-width: 350px;
+  }
+
+  .menpai .sec_bg video {
+    margin-left: -150px;
+  }
+
+  .menpai .mask {
+    right: -300px;
+    background: url(/assets/menpai.png) no-repeat right bottom;
+  }
+
+  .chara_intro {
+    bottom: 120px;
+  }
+
+  .chara_intro p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .chara_title {
+    max-width: 260px;
+  }
+
+  .chara_icon li a {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .version_content {
+    max-width: 900px;
+  }
+
+  .v_content {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  #chara01 .chara_img {
+    background: url(/assets/images/class/charsv2/tvm.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara02 .chara_img {
+    background: url(/assets/images/class/charsv2/hhp.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara03 .chara_img {
+    background: url(/assets/images/class/charsv2/tat.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara04 .chara_img {
+    background: url(/assets/images/class/charsv2/qvt.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara05 .chara_img {
+    background: url(/assets/images/class/charsv2/qd.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara06 .chara_img {
+    background: url(/assets/images/class/charsv2/phc.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara07 .chara_img {
+    background: url(/assets/images/class/charsv2/cl.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara08 .chara_img {
+    background: url(/assets/images/class/charsv2/ls.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara09 .chara_img {
+    background: url(/assets/images/class/charsv2/thaihao.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara010 .chara_img {
+    background: url(/assets/images/class/charsv2/hq.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara011 .chara_img {
+    background: url(/assets/images/class/charsv2/thienhoa.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara012 .chara_img {
+    background: url(/assets/images/class/charsv2/thanhoang.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara013 .chara_img {
+    background: url(/assets/images/class/charsv2/ac.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara014 .chara_img {
+    background: url(/assets/images/class/charsv2/kc.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara015 .chara_img {
+    background: url(/assets/images/class/charsv2/tl.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara016 .chara_img {
+    background: url(/assets/images/class/charsv2/pq.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara017 .chara_img {
+    background: url(/assets/images/class/charsv2/qv.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  #chara018 .chara_img {
+    background: url(/assets/images/class/charsv2/ha.png) no-repeat right center;
+    background-size: contain;
+  }
+
+  .role {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .version_content {
+    max-width: 800px;
+  }
+
+  .version_content .nav-link {
+    padding: 0.3rem;
+  }
+
+  .v_content {
+    margin-right: 20px;
+    padding-right: 5px;
+    height: 180px;
+    font-size: 15px;
+    line-height: 24px;
+    overflow-y: auto;
+  }
+
+  .v_content::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .v_content::-webkit-scrollbar-track {
+    background: #ffcfb6;
+    border-radius: 10px;
+  }
+
+  .v_content::-webkit-scrollbar-thumb {
+    background-color: #a5472e;
+    border-radius: 10px;
+  }
+
+  .version_content h3 {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+
+  .title {
+    max-width: 300px;
+  }
+
+  .menpai {
+    height: 600px;
+  }
+
+  .chara_intro {
+    max-width: 450px;
+    bottom: 90px;
+  }
+
+  .chara_title {
+    max-width: 230px;
+  }
+
+  .chara_intro p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .chara_icon {
+    bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .rewards_list {
+    margin-bottom: -20%;
+  }
+
+  .version_content {
+    max-width: 760px;
+  }
+
+  #news_list ul li a {
+    padding: 7.5px 0;
+  }
+
+  .gameinfo .icon {
+    max-width: 200px;
+  }
+
+  .gameinfo .game {
+    margin-left: 20px;
+  }
+
+  .gameinfo h3 {
+    margin: 10px auto;
+  }
+
+  .gameinfo p {
+    line-height: initial;
+  }
+
+  .gameinfo p span {
+    margin-top: 10px;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .langs {
+    right: 0;
+    top: 330px;
+    left: 30px;
+  }
+
+  .langs_list {
+    top: auto;
+    bottom: 15px;
+  }
+
+  aside {
+    display: none;
+  }
+
+  nav .menu {
+    position: fixed;
+    top: -100%;
+    right: initial;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    transform: initial;
+    transition: .5s top;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav .menu.open {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    top: 45px;
+    left: 0;
+    opacity: 1;
+    transition: .5s top;
+  }
+
+  nav .menu.open ul {
+    padding: 10px 40px;
+    width: 100%;
+  }
+
+  nav .menu.open ul li {
+    display: block;
+    margin-left: initial;
+    text-align: left;
+  }
+
+  nav .menu.open ul li a {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    transition: inherit;
+  }
+
+  nav .menu.open ul li:last-child {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  .snslink {
+    position: relative;
+    display: block;
+    padding: 0 40px;
+    text-align: right;
+  }
+
+  .snslink::before {
+    content: "Fanpage";
+    display: block;
+    position: absolute;
+    top: 50%;
+    color: #5c5c5c;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transform: translateY(-50%);
+  }
+
+  .snslink a {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 2px;
+    background: #838e94;
+  }
+
+  .open_menu {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    width: 30px;
+    height: 45px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .open_menu span.btn {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    opacity: 1;
+  }
+
+  .open_menu .btn span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #5f89b8;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+  }
+
+  .open_menu .btn span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(2) {
+    top: 8px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(3) {
+    top: 16px;
+    transform-origin: left center;
+  }
+
+  .open_menu.close .btn span:nth-child(1) {
+    top: -2px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+
+  .open_menu.close .btn span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .open_menu.close .btn span:nth-child(3) {
+    top: 19px;
+    left: 5px;
+    transform: rotate(-45deg);
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+
+  .slogan {
+    max-width: 500px;
+  }
+
+  .btn_video {
+    transform: scale(.8);
+  }
+
+  #video .btn_video {
+    transform: translate(-50%, -50%)scale(.8);
+  }
+
+  #video:hover .btn_video {
+    transform: translate(-50%, -50%)scale(.9);
+  }
+
+
+  .rewards_icon {
+    margin: 0 5px;
+    width: 23%;
+  }
+
+  .rewards_icon.r5, .rewards_icon.r7 {
+    top: -150px;
+  }
+
+  .rewards_icon.r6 {
+    top: -100px;
+  }
+
+  .version_content {
+    margin: 0 auto;
+    margin: 1.6%;
+    padding: 0 20px;
+    max-width: 575px;
+  }
+
+  .version_content_bg .md {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .version_content .nav {
+    margin: 10% auto 2%;
+  }
+
+  .version_content .nav-link {
+    padding: .2rem;
+  }
+
+  .v_content {
+    margin-right: 0;
+    height: 400px;
+  }
+
+  .news_contnet {
+    max-width: 720px;
+    box-shadow: initial;
+  }
+
+  #ubanner_A {
+    box-shadow: rgba(41, 114, 149, 0.4) 0px 1px 15px;
+  }
+
+  .news_list {
+    margin-top: 20px;
+    height: initial;
+    box-shadow: rgba(41, 114, 149, 0.4) 0px 1px 15px;
+  }
+
+  .system-more img {
+    width: 100%;
+  }
+
+  #news_list .system-title, #news_list .systemtime {
+    text-align: center;
+  }
+
+  .news_btn {
+    margin: 0 auto;
+    max-width: 540px;
+    text-align: center;
+  }
+
+  .news_banner {
+    padding-top: 45px;
+  }
+
+  .menpai {
+    height: 1080px;
+    background: url(/assets/menpai_m.jpg) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara01 .chara_img {
+    background: url(/assets/images/class/charsv2/tvm.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara02 .chara_img {
+    background: url(/assets/images/class/charsv2/hhp.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara03 .chara_img {
+    background: url(/assets/images/class/charsv2/tat.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara04 .chara_img {
+    background: url(/assets/images/class/charsv2/qvt.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara05 .chara_img {
+    background: url(/assets/images/class/charsv2/qd.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara06 .chara_img {
+    background: url(/assets/images/class/charsv2/phc.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara07 .chara_img {
+    background: url(/assets/images/class/charsv2/ls.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara08 .chara_img {
+    background: url(/assets/images/class/charsv2/cl.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara09 .chara_img {
+    background: url(/assets/images/class/charsv2/thaihao.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara010 .chara_img {
+    background: url(/assets/images/class/charsv2/hq.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara011 .chara_img {
+    background: url(/assets/images/class/charsv2/thienhoa.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara012 .chara_img {
+    background: url(/assets/images/class/charsv2/thanhoang.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara013 .chara_img {
+    background: url(/assets/images/class/charsv2/ac.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara014 .chara_img {
+    background: url(/assets/images/class/charsv2/kc.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara015 .chara_img {
+    background: url(/assets/images/class/charsv2/tl.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara016 .chara_img {
+    background: url(/assets/images/class/charsv2/pq.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara017 .chara_img {
+    background: url(/assets/images/class/charsv2/qv.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  #chara018 .chara_img {
+    background: url(/assets/images/class/charsv2/ha.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  .chara_content.on .chara_img {
+    animation: fadetop .7s forwards;
+  }
+
+  @keyframes fadetop {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .chara_shadow {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: url(/assets/shadow.png) no-repeat center 80%;
+    background-size: cover;
+  }
+
+  .chara_intro {
+    padding: 0 40px;
+    max-width: 600px;
+    width: 100%;
+    bottom: 100px;
+  }
+
+  .chara_intro::before {
+    display: none;
+  }
+
+  .chara_title {
+    max-width: 300px;
+  }
+
+  .chara_intro p {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .app_store {
+    margin: 20px auto 50px;
+  }
+
+  .gameinfo .container {
+    max-width: 520px;
+  }
+
+  .gameinfo .icon {
+    max-width: 160px;
+  }
+
+  .gameinfo .game {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .gameinfo .customer {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:992px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .version_content .nav {
+    max-width: 400px;
+  }
+
+  .news_contnet {
+    margin: 20px auto;
+    max-width: 550px;
+  }
+
+  #news_list .system-title {
+    text-align: left;
+  }
+
+  #news_list .systemtime {
+    text-align: right;
+  }
+
+  .latestnews-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .menpai {
+    height: 950px;
+  }
+
+  .chara_shadow {
+    background-position: center bottom;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .rewards_icon {
+    margin: 0 -5px;
+    width: 26%;
+  }
+
+  .rewards_icon.r1, .rewards_icon.r4 {
+    top: -30px;
+  }
+
+  .rewards_icon.r5, .rewards_icon.r7 {
+    top: -100px;
+  }
+
+  .rewards_icon.r6 {
+    margin: 0 5px;
+    top: -70px;
+  }
+
+  .version_content {
+    padding: 0 7%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .version_content_bg .md {
+    display: none;
+  }
+
+  .version_content_bg .mob {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  section {
+    padding: 20px 0;
+  }
+
+  .title {
+    max-width: 280px;
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    margin: 370px auto 10px;
+    max-width: 200px;
+  }
+
+  .slogan {
+    margin: 0 auto 60px;
+  }
+
+  .btn_video {
+    transform: scale(.7);
+  }
+
+  #video .btn_video {
+    transform: translate(-50%, -50%)scale(.6);
+  }
+
+  #video:hover .btn_video {
+    transform: translate(-50%, -50%)scale(.7);
+  }
+
+  .bottom {
+    margin: 60px auto 0;
+  }
+
+  main {
+    margin-top: -350px;
+    padding: 120px 0 0;
+  }
+
+  .rewards_list {
+    margin-top: 0;
+    margin-bottom: -15%;
+  }
+
+  .rewards_icon {
+    margin: 0 -5px;
+    width: 27%;
+  }
+
+  .rewards_icon.r1, .rewards_icon.r2, .rewards_icon.r3,
+  .rewards_icon.r4, .rewards_icon.r5, .rewards_icon.r6,
+  .rewards_icon.r7 {
+    top: 0;
+  }
+
+  .rewards_icon.r5, .rewards_icon.r6,
+  .rewards_icon.r7 {
+    top: -30px;
+  }
+
+  .rewards_txt {
+    /*margin-top: -20px;*/
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .rewards_txt h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .v_content {
+    font-size: 14px;
+    line-height: 20px;
+    height: 200px;
+  }
+
+  .v_content h3 {
+    font-size: 18px;
+  }
+
+  .news {
+    padding: 20px 0;
+  }
+
+  .news_list {
+    margin-top: 10px;
+  }
+
+  #news_list {
+    padding: 10px 12px 0;
+  }
+
+  #news_list ul li a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  #news_list .systemtime {
+    font-size: 12px;
+  }
+
+  .system-more .news_title, .system-more .more {
+    margin-top: -8px;
+  }
+
+  .system-more .news_title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .system-more .more {
+    right: 10px;
+    font-size: 16px;
+  }
+
+  .system-more .more::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .news_btn {
+    padding: 10px;
+  }
+
+  .news_banner {
+    padding-bottom: 0;
+  }
+
+  .latestnews, .newsdetails {
+    padding: 20px 0;
+  }
+
+  .latestnews-title {
+    font-size: 16px;
+  }
+
+  .newsdetails-newsbadge, .newsdetails-sysbadge {
+    font-size: 14px;
+  }
+
+  .latestnews-details {
+    font-size: 12px;
+    letter-spacing: .5px;
+  }
+
+  .pagination ul {
+    margin: 50px auto 30px;
+  }
+
+  .pagination ul li a {
+    margin: 4px;
+    padding: .5rem .8rem;
+  }
+
+  .menpai {
+    height: auto;
+  }
+
+  .chara {
+    position: initial;
+  }
+
+  .chara_shadow {
+    bottom: 0;
+    background-size: 100%;
+  }
+
+  .chara_intro {
+    position: relative;
+    margin-top: 75%;
+    padding: 0 15px;
+    bottom: initial;
+  }
+
+  .chara_title {
+    max-width: 220px;
+  }
+
+  .chara_icon {
+    position: relative;
+    bottom: initial;
+  }
+
+  .chara li a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .features {
+    padding-bottom: 5px;
+  }
+
+  .app_store {
+    margin: 10px auto;
+  }
+
+  .carousel-indicators {
+    bottom: -2px;
+  }
+
+  .banner .carousel-indicators {
+    bottom: 0;
+  }
+
+  .game_btn {
+    margin: 20px auto 35px;
+  }
+
+  .gameinfo h3 {
+    font-size: 22px;
+  }
+
+  .gameinfo p {
+    font-size: 14px;
+  }
+
+  .gameinfo .btn {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .version_content .nav {
+    margin: 8% auto 0;
+  }
+
+  .v_content {
+    height: 180px;
+  }
+
+  .chara_shadow {
+    background-size: 135%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .chara_shadow {
+    background-size: 150%;
+  }
+
+  .chara li a {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .system-more .news_title {
+    font-size: 18px;
+  }
+
+  .system-more .more {
+    font-size: 14px;
+  }
+
+  .system-more .more::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pagination ul {
+    margin: 40px auto 20px;
+  }
+
+  .pagination ul li a {
+    margin: 3px;
+    padding: .5rem .6rem;
+  }
+
+  .chara_shadow {
+    background-size: 180%;
+  }
+
+  .chara_icon li a {
+    width: 38px;
+    height: 38px;
+  }
+
+  footer .grading img {
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  footer .company img {
+    margin: 8px 3px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  nav .menu {
+    height: 320px;
+  }
+
+  nav .menu.open ul li a, .snslink::before {
+    font-size: 14px;
+  }
+
+  .snslink a {
+    margin: 5px 2px;
+    max-width: 35px;
+  }
+
+  .rewards_txt {
+    margin-top: -20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .rewards_txt h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .chara_title {
+    max-width: 180px;
+  }
+
+  .chara_intro p {
+    margin: 10px auto;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .chara_icon li {
+    margin: 0 -3px;
+  }
+
+  .chara_icon li a {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+html {
+  min-width: 1200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  background-color: #FFF;
+}
+
+div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, textarea, table, td {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+area {
+  outline: none;
+}
+
+img {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+@keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+
+.race {
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/faction.png);
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}

@@ -1,0 +1,123 @@
+﻿/*---- footer ----*/
+footer {
+    position: relative;
+    padding: 10px 0;
+    color: #fff;
+    font-size: .7rem;
+    text-align: center;
+    letter-spacing: .2px;
+    line-height: normal;
+    background: #000;
+    z-index: 2;
+}
+
+footer p{
+    opacity: .6;
+    margin-bottom: 0;
+}
+
+footer p a {
+    color: inherit;
+}
+
+footer p a:hover {
+    color: #e51737;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+footer .copyright,
+footer .company,
+footer p{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+footer .copyright {
+    margin-right: 10px;
+}
+
+footer img {
+    width: 300px;
+    margin: 0 6px;
+}
+
+
+/*---- footer ----*/
+footer {
+  padding: 13px 0;
+  width: 100%;
+  color: #000;
+  background: #fff;
+  overflow: visible;
+}
+footer p, footer ul, footer li {
+  opacity: 1;
+}
+footer .company, footer .copyright {
+  margin-right: 3px;
+}
+.footer {
+  height: 80px;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 1500px) {
+    footer .copyright, footer .company, footer p, footer .grading {
+      display: block;
+      margin: 15px auto;
+      text-align: center;
+    }
+    footer .copyright {
+      margin-bottom: 20px;
+    }
+    footer ul {
+      text-align: left;
+    }
+    footer .company, footer .copyright {
+      margin-right: 0;
+    }
+    .footer {
+      height: 155px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    footer .company,
+    footer p,
+    footer .copyright {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    footer {
+      padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    footer .company img {
+      margin: 5px 3px;
+    }
+    footer .grading img {
+      margin-bottom: 8px;
+    }
+    footer ul {
+      text-align: justify;
+    }
+    .footer {
+      height: 255px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .footer {
+      height: 300px;
+    }
+}
+
+
+
+
