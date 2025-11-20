@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="news_banner">
-    <img class="img-fluid d-none d-lg-block" src="/assets/news_banner.jpg">
-    <img class="img-fluid d-lg-none" src="/assets/news_banner_m.jpg">
-</section>
+@include('layouts.video')
 <section class="newsdetails">
     <div class="container">
 
@@ -143,9 +140,8 @@
                                 href="https://www.lo4d.com/get-file/directx-9-0c/9c8018e5f39836bc2eb566e12f815837/">DirectX
                                 9.0c</a>&nbsp;trở lên.</p>
                         <p>Các thắc mắc liên quan đến tải & cài đặt game, kỳ sĩ vui lòng gửi thông tin về trang&nbsp;<a
-                                href="https://www.facebook.com/zhuxian.AOC/" target="_blank">Fanpage hỗ
-                                trợ</a>&nbsp;hoặc liên hệ
-                            trực tiếp zalo&nbsp;<strong>0355251714&nbsp;</strong>để nhận được sự hỗ trợ tốt
+                                href="https://www.facebook.com/trutientuoitho/" target="_blank">Fanpage hỗ
+                                trợ</a>&nbsp;để nhận được sự hỗ trợ tốt
                             nhất.</p>
 
                         <p>Trân trọng!</p>

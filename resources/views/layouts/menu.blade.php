@@ -3,11 +3,11 @@
         <div class="menu">
             <ul>
                 <li><a href="/" class="home">Trang Chủ</a></li>
-                <li><a href="/tin-tuc">Tin Tức</a></li>
-                <li><a href="/huong-dan" target="_blank">Tải Game</a></li>
-                <li><a href="/thu-vien">Hướng Dẫn</a></li>
+                <li><a href="https://news.trutientuoitho.com" target="_blank">Tin Tức</a></li>
+                <li><a href="/tai-game">Tải Game</a></li>
+                <li><a href="https://news.trutientuoitho.com" target="_blank">Hướng Dẫn</a></li>
                 </li>
-                <li><a href="https://id.trutienhonthe.com" target="_blank">Đăng Ký</a></li>
+                <li><a href="https://trutientuoitho.com/account" target="_blank">Đăng Ký</a></li>
             </ul>
         </div>
 

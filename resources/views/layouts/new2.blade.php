@@ -30,38 +30,87 @@
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
         <div class="news">
-            <ul class="nav news-tab">
-                <li><img src="/assets/wmlogo_en_black.png" alt=""></li>
-            </ul>
+            <span class="text-center new-title">TIN TỨC - SỰ KIỆN</span>
             <div class="tab-content">
                 <div>
                     <ul class="news-list">
-                        @foreach ($posts as $post)
-                            <li class="{{ $loop->index == 0 ? 'highlight' : '' }}">
-                                <a class="news-title" href="/tin-tuc/{{ $post->slug }}" title="{{ $post->title }}">
-                                    @if ($loop->index == 0)
-                                        <img src="/assets/news-new-icon.jpg?ver=2.3" alt="">
-                                    @endif
-                                    <span>
-                                        {{ $post->title }}
-                                    </span>
-                                    <time class="news-time"
-                                        datetime="{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}">{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}</time>
-                                </a>
-                            </li>
-                        @endforeach
+                        <li class="highlight">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank"
+                                title="[Hướng dẫn] Tính năng đồ giám quản lý thời trang">
+                                <img src="/assets/news-new-icon.jpg?ver=2.3" alt="">
+                                <span>
+                                    Thông tin máy chủ 14 class
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="news-title" href="https://news.trutientuoitho.com" target="_blank">
+                                <span>
+                                    Tiêu đề tin tức, hướng dẫn
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                    <a class="news-more" href="/tin-tuc" title="xem thêm">
-                        <img src="/assets/xemthem-btn.jpg?ver=2.3" alt="">
+                    <a class="news-more" target="_blank" href="https://news.trutientuoitho.com" title="xem thêm" style="color: black">
+                        Xem thêm+
                     </a>
                 </div>
             </div>
         </div>
-       
+
     </div>
 </div>
 
 <style>
+    .new-title {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 8px;
+        color: #222;
+    }
+
     .btns {
         display: -webkit-box;
         display: -webkit-flex;

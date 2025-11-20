@@ -14,22 +14,22 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/store_img01.jpg">
+                        <img class="d-block w-100" src="/assets/img18.jpg">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/store_img02.jpg">
+                        <img class="d-block w-100" src="/assets/img12.jpg">
                     </div>
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="/assets/store_img03.jpg">
+                        <img class="d-block w-100" src="/assets/img03.jpg">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/store_img04.jpg">
+                        <img class="d-block w-100" src="/assets/img19.jpg">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/store_img05.jpg">
+                        <img class="d-block w-100" src="/assets/img16.jpg">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/store_img06.jpg">
+                        <img class="d-block w-100" src="/assets/img18.jpg">
                     </div>
                 </div>
             </div>

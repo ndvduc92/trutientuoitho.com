@@ -1,5 +1,7 @@
 <!-- Menpai -->
-<section class="menpai">
+<section class="menpai" style="background: #171c22">
+    <div class="title"><img class="img-fluid"
+            src="https://st1.cmn.vn/games/tien-kiem/mainsite/images/title-nhanvat.png?ver=1.7"></div>
     <div class="chara">
         <div class="chara_item">
             <div id="chara01" class="chara_content chara_content_nhantoc on">
@@ -215,60 +217,6 @@
                         nhiều cạm bẫy. Hãy chú ý cảnh giác khi đối đầu với Khiên Cơ.</p>
                 </div>
             </div>
-            <div id="chara015" class="chara_content chara_content_thienmach" style="display: none;">
-
-                <div class="chara_img"></div>
-                <div class="chara_shadow"></div>
-                <div class="chara_intro">
-                    <div class="chara_title">
-                        <img class="img-fluid d-none d-lg-block" src="/assets/images/class/titles/tl.png">
-                        <img class="img-fluid d-lg-none" src="/assets/images/class/titles/tl_mobile.png">
-                    </div>
-                    <p>Tiêu dao tự tại, lúc thì đến như cuồng phong lúc đi tựa gió thoảng. Có khả năng duy trì khống
-                        chế và chúc phúc đơn thể trong thời gian dài, kỹ năng đơn chiến mạnh mẽ.</p>
-                </div>
-            </div>
-            <div id="chara016" class="chara_content chara_content_thienmach" style="display: none;">
-
-                <div class="chara_img"></div>
-                <div class="chara_shadow"></div>
-                <div class="chara_intro">
-                    <div class="chara_title">
-                        <img class="img-fluid d-none d-lg-block" src="/assets/images/class/titles/pq.png">
-                        <img class="img-fluid d-lg-none" src="/assets/images/class/titles/pq_mobile.png">
-                    </div>
-                    <p>Độc lai độc vãng, tốc chiến tốc thắng, am hiểu nhiều loại công pháp và vũ khí.</p>
-                </div>
-            </div>
-            <div id="chara017" class="chara_content chara_content_thienmach" style="display: none;">
-
-                <div class="chara_img"></div>
-                <div class="chara_shadow"></div>
-                <div class="chara_intro">
-                    <div class="chara_title">
-                        <img class="img-fluid d-none d-lg-block" src="/assets/images/class/titles/qv.png">
-                        <img class="img-fluid d-lg-none" src="/assets/images/class/titles/qv_mobile.png">
-                    </div>
-                    <p>Sử dụng Kim Tán hộ thể , thấu hiểu thời không công thủ toàn diện. Có khả năng tạo thành sát
-                        thương lớn trong phạm vi rộng, nhiều kỹ năng sinh tồn trong giao tranh.</p>
-                </div>
-            </div>
-            <div id="chara018" class="chara_content chara_content_thienmach" style="display: none;">
-
-                <div class="chara_img"></div>
-                <div class="chara_shadow"></div>
-                <div class="chara_intro">
-                    <div class="chara_title">
-                        <img class="img-fluid d-none d-lg-block" src="/assets/images/class/titles/ha.png">
-                        <img class="img-fluid d-lg-none" src="/assets/images/class/titles/ha_mobile.png">
-                    </div>
-                    <p>Sở hữu khả năng hỗ trợ đồng đội hồi phục khí huyết cường đại cùng khả năng tổ chú kẻ địch
-                        phong phú, tinh
-                        thông ngũ hành chi thuật, điều khiển thiên địa chi khí xoay chuyển càn khôn, quyết tâm chiến
-                        thắng ngoại
-                        tộc.</p>
-                </div>
-            </div>
         </div>
         <div class="chara_icon">
             <li id="01" class="icon_class icon_nhantoc active"><a href="#chara01"></a></li>
@@ -298,18 +246,77 @@
         </div>
     </div>
     <div class="chara_icon2">
-        <li role="button" id="nhantoc"><img class="img-fluid" src="/assets/images/class/nhantoc_active.png">
-        </li>
-        <li role="button" id="thandue"><img class="img-fluid" src="/assets/images/class/thandue.png"></li>
-        <li role="button" id="thienmach"><img class="img-fluid" src="/assets/images/class/thienmach.png"></li>
+        <li role="button" id="nhantoc" class="active">NHÂN TỘC</li>
+        <li role="button" id="thandue" class="">THẦN DUỆ</li>
+        <li role="button" id="thienmach" class="">THIÊN MẠCH</li>
     </div>
 </section>
 
 <style>
     .chara_icon2 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 180px;
+    }
+
+    .chara_title {
+        list-style: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+
+        background: url('/assets/monphai-tab.png') no-repeat center center;
+        background-size: contain;
+
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .chara_icon li{
+        background: url('https://trutien.net/statics/images/bg-dot-sect4.png') no-repeat center center;
+        background-size: contain;
+
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .chara_icon2 li{
+        list-style: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+
+        background: url('/assets/monphai-tab.png') no-repeat center center;
+        background-size: contain;
+
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover dùng hình hover */
+    .chara_icon2 li:hover {
+        background: url('/assets/monphai-tab-hover.png') no-repeat center center;
+        background-size: contain;
+        color: #ffd;
+        /* đổi màu chữ khi hover nếu muốn */
+    }
+
+    /* Active (tab được chọn) */
+    .chara_icon2 li.active {
+        background: url('https://st1.cmn.vn/games/tien-chien/mainsite/images/monphai-tab-hover.png') no-repeat center center;
+        background-size: contain;
+        color: #ffd;
+        /* hoặc màu chữ khác cho active */
+    }
+
+    .chara_icon2 {
         position: absolute;
         left: 0;
-        bottom: 40px;
+        bottom: 50%;
         z-index: 5;
     }
 
@@ -317,3 +324,10 @@
         cursor: pointer;
     }
 </style>
+
+<script>
+    $('.chara_icon2 li').on('click', function () {
+    $('.chara_icon2 li').removeClass('active'); // bỏ active tất cả
+    $(this).addClass('active');                 // gán active cho thằng được click
+});
+</script>

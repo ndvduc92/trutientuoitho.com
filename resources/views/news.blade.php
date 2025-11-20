@@ -31,7 +31,6 @@
         </div>
     </section>
 
-    @include('layouts.info')
     <style>
         .new-tintuc {
             border: 1px solid #007ac8;

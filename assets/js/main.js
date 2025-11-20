@@ -114,10 +114,6 @@ $(function () {
     $(".icon_nhantoc").first().addClass("active")
     $(".chara_content").removeClass('on')
     $(".chara_content_nhantoc").first().addClass('on')
-
-    $("#nhantoc img").attr("src", "/assets/images/class/nhantoc_active.png")
-    $("#thandue img").attr("src", "/assets/images/class/thandue.png")
-    $("#thienmach img").attr("src", "/assets/images/class/thienmach.png")
   })
   $("#thandue").click(function () {
     $(".icon_nhantoc").css("display", "none")
@@ -127,10 +123,6 @@ $(function () {
     $(".icon_thandue").first().addClass("active")
     $(".chara_content").removeClass('on')
     $(".chara_content_thandue").first().addClass('on')
-
-    $("#nhantoc img").attr("src", "/assets/images/class/nhantoc.png")
-    $("#thandue img").attr("src", "/assets/images/class/thandue_active.png")
-    $("#thienmach img").attr("src", "/assets/images/class/thienmach.png")
   })
   $("#thienmach").click(function () {
     $(".icon_nhantoc").css("display", "none")
@@ -140,10 +132,6 @@ $(function () {
     $(".icon_thienmach").first().addClass("active")
     $(".chara_content").removeClass('on')
     $(".chara_content_thienmach").first().addClass('on')
-
-    $("#nhantoc img").attr("src", "/assets/images/class/nhantoc.png")
-    $("#thandue img").attr("src", "/assets/images/class/thandue.png")
-    $("#thienmach img").attr("src", "/assets/images/class/thienmach_active.png")
   })
 
   // features
