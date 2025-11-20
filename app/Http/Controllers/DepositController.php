@@ -70,8 +70,8 @@ class DepositController extends Controller
         $histories        = Deposit::where("user_id", Auth::user()->id)->where("is_revenue", 1)->latest()->get();
         $sum              = Deposit::where("user_id", Auth::user()->id)->where("is_revenue", 1)->sum("amount");
         $currentPromotion = Promotion::where('start_time', '<=', $now)->where('end_time', '>=', $now)->first();
-        $img              = "https://qr.sepay.vn/img?template=compact&acc=96247TTVN&bank=BIDV&des=TTVN" . strtoupper(Auth::user()->username);
-        return view("deposit", [
+        $img              = "https://qr.sepay.vn/img?template=compact&acc=trutientuoitho&bank=BIDV&des=TTTT" . strtoupper(Auth::user()->username);
+        return view("account.deposit", [
             "currentPromotion" => $currentPromotion,
             "img"              => $img,
             "histories"        => $histories,

@@ -8,7 +8,7 @@ class CharService
 {
     public function chars()
     {
-        $GameServer     = '202.92.6.133';
+        $GameServer     = '103.56.160.134';
         $GamedbPort     = '29400';
         $GdeliverydPort = '29100';
         $GProviderPort  = '29300';

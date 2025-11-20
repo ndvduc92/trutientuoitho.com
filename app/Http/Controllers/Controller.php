@@ -13,7 +13,7 @@ class Controller extends BaseController
     public function callGameApi($method, $path, $params)
     {
         $client   = new \GuzzleHttp\Client();
-        $gameApi  = env('GAME_API_ENDPOINT', "http://202.92.6.133");
+        $gameApi  = env('GAME_API_ENDPOINT', "http://103.56.160.134");
         $response = $client->request($method, $gameApi . $path, ["form_params" => $params]);
         $response = json_decode($response->getBody()->getContents(), true);
         return $response;

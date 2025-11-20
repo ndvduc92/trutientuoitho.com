@@ -17,7 +17,7 @@ class KnbController extends Controller
         $knbs = Transaction::where("user_id", Auth::user()->id)->whereIn("type", ["knb", "war_knb"])->latest()->get();
         $sum  = Transaction::where("user_id", Auth::user()->id)->whereIn("type", ["knb", "war_knb"])->sum("knb_amount");
         $sum  = number_format($sum);
-        return view("knb", ["knbs" => $knbs, "sum" => $sum]);
+        return view("account.knb", ["knbs" => $knbs, "sum" => $sum]);
     }
 
     private function isWaiting()
@@ -58,47 +58,8 @@ class KnbController extends Controller
 
     public function postKnb()
     {
-        $type = request()->type;
-        if (! (in_array($type, ["knb", "war"]))) {
-            return back()->with("error", "Vui lòng chọn loại xu trước!!");
-        }
-
-        if (! isOnline()) {
-            return back()->with("error", "Server chưa hoạt động. Vui lòng quay lại sau.");
-        }
-
-        if ($this->isWaiting()) {
-            return back()->with("error", "Thao tác quá nhanh, quay lại sau vài phút nữa nhé!!!");
-        }
-        $user = Auth::user();
-        $xu   = request()->cash;
-        if ($type == "war") {
-            if ($xu < 10 || $user->warCoin() < $xu) {
-                return back()->with("error", "Số xu war không đủ!");
-            }
-
-            try {
-                DB::beginTransaction();
-                $this->callGameApi("POST", "/api/knb.php", [
-                    "userid" => $user->userid,
-                    "cash"   => intval($xu * 100) * 3,
-                ]);
-                $user->war_point_used = intval($user->war_point_used) + $xu;
-                $user->save();
-
-                $transaction             = new Transaction;
-                $transaction->user_id    = $user->id;
-                $transaction->knb_amount = $xu * 3;
-                $transaction->type       = "war_knb";
-                $transaction->save();
-                DB::commit();
-                return back()->with("success", "Đã chuyển " . intval($xu) * 3 . " KNB vào game thành công!");
-            } catch (\Throwable $th) {
-                DB::rollback();
-
-                return back()->with("error", "Có lỗi xảy ra, vui lòng liên hệ GM!");
-            }
-        }
+        $xu = request()->xu;
+        $user = current_user();
         if ($xu < 30000 || $xu > $user->balance) {
             return back()->with("error", "Số xu nạp phải lớn hơn 30.000 và nhỏ hơn số xu hiện có!");
         }
@@ -107,18 +68,18 @@ class KnbController extends Controller
             DB::beginTransaction();
             $this->callGameApi("POST", "/api/knb.php", [
                 "userid" => $user->userid,
-                "cash"   => intval($xu / 10) * 3,
+                "cash"   => intval($xu / 10),
             ]);
             $user->balance = intval($user->balance) - $xu;
             $user->save();
 
             $transaction             = new Transaction;
             $transaction->user_id    = $user->id;
-            $transaction->knb_amount = intval($xu / 1000) * 3;
+            $transaction->knb_amount = intval($xu / 1000);
             $transaction->type       = "knb";
             $transaction->save();
             DB::commit();
-            return back()->with("success", "Đã chuyển " . intval($xu / 1000) * 3 . " KNB vào game thành công!");
+            return back()->with("success", "Đã chuyển " . intval($xu / 1000) . " KNB vào game thành công!");
         } catch (\Throwable $th) {
             DB::rollback();
             return back()->with("error", "Có lỗi xảy ra, vui lòng liên hệ GM!");

@@ -54,50 +54,12 @@
                     </div>
                 </div>
 
-                <ul class="sidebar-nav">
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href='/account'>
-                            <i class="align-middle" data-feather="slack"></i> <span class="align-middle">Đại Sảnh</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href='#'>
-                            <i class="align-middle me-2 fas fa-fw fa-gift"></i> <span
-                                class="align-middle">Giftcode</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href=''>
-                            <i class="align-middle me-2 fas fa-fw fa-money-bill"></i> <span class="align-middle">Nạp tiền</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href=''>
-                            <i class="align-middle me-2 fas fa-fw fa-coins"></i> <span class="align-middle">Đổi KNB</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href=''>
-                            <i class="align-middle me-2 fas fa-fw fa-paper-plane"></i> <span class="align-middle">Cửa Hàng</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class='sidebar-link' href=''>
-                            <i class="align-middle me-2 fas fa-fw fa-tree"></i> <span class="align-middle">Rung Cây</span>
-                            <span class="sidebar-badge badge bg-danger">Mới</span>
-                        </a>
-                    </li>
-                </ul>
+                @include('account.layouts.menuitem')
 
                 <div class="sidebar-cta">
                     <div class="sidebar-cta-content">
                         <div class="d-grid">
-                            <a href="/tai-game" class="btn btn-outline-primary" target="_blank">Tải Game</a>
+                            <a href="/" class="btn btn-outline-primary" target="_blank">Trang Chủ</a>
                         </div>
                     </div>
                 </div>
@@ -110,34 +72,43 @@
                     <i class="hamburger align-self-center"></i>
                 </a>
                 @include('account.layouts.info-box')
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav navbar-align">
-                        <li class="nav-item">
-                            <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
-                                <div class="position-relative">
-                                    <i class="align-middle" data-feather="maximize"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                <img src="/assets/newlogo.png" class="avatar img-fluid rounded"
-                                    alt="Charles Hall" />{{Auth::user()->name}}
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a class='dropdown-item' href='/account'><i class="align-middle me-1"
-                                        data-feather="user"></i> Cá nhân</a>
-                                <a class="dropdown-item" href="/account/logout"><i class="align-middle me-1"
-                                        data-feather="log-out"></i> Thoát</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </nav>
 
             <main class="content">
                 <div class="container-fluid p-0">
+                    @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <h6 class="alert-heading"><i
+                                    class="align-middle me-2 fas fa-fw fa-exclamation-triangle"></i>Đã có lỗi xảy ra
+                            </h6>
+                            <p>{{ $errors->first() }}</p>
+                        </div>
+                    </div>
+                    @endif
+                    @if (Session::has('success'))
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <h6 class="alert-heading"><i class="align-middle me-2 fas fa-fw fa-check-circle"></i>Xin
+                                chúc mừng!</h6>
+                            <p>{{ Session::get('success') }}</p>
+                        </div>
+                    </div>
+                    @endif
 
+                    @if (Session::has('error'))
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <h6 class="alert-heading"><i
+                                    class="align-middle me-2 fas fa-fw fa-exclamation-triangle"></i>Đã có lỗi xảy ra!
+                            </h6>
+                            <p>{{ Session::get('error') }}</p>
+                        </div>
+                    </div>
+                    @endif
                     @yield('content')
 
                 </div>

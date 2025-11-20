@@ -1,10 +1,7 @@
 <div class="header-info-box">
-                    <span><span class="icon"></span><strong>TÀI KHOẢN:</strong> {{Auth::user()->username}}</span>
-                    <span><span class="icon"></span><strong>XU NẠP:</strong>
-                        {{number_format(Auth::user()->balance)}}</span>
-                    {{-- <span><span class="icon"></span><strong>XU WAR:</strong> {{ number_format(Auth::user()->war_point -
-                        Auth::user()->war_point_used) }}</span>
-                    <span><span class="icon"></span><strong>XU EVENT:</strong>{{number_format(Auth::user()->xu_event -
-                        Auth::user()->xu_event_used)}}</span>
-                 --}}
-                 </div>
+    <span><i class="align-middle me-1" data-feather="user"></i><strong>TÀI KHOẢN:</strong> {{Auth::user()->username}}</span>
+    <span><i class="align-middle me-2 fas fa-fw fa-coins"></i><strong>XU NẠP:</strong>
+        {{number_format(Auth::user()->balance)}}</span>
+    <span><i class="align-middle me-2 fas fa-fw fa-user-ninja"></i><strong>Player</strong></span>
+    <span>@include('account.layouts.chars')</span>
+</div>

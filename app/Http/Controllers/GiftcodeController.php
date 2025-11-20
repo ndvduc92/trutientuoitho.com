@@ -27,7 +27,7 @@ class GiftcodeController extends Controller
             $data = Giftcode::where("type", "vip")->where("viplevel", "<=", $user->viplevel)->pluck("id")->toArray();
         }
         $giftcodes = Giftcode::with("items")->whereIn("id", $data)->get();
-        return view("giftcodes", ["giftcodes" => $giftcodes]);
+        return view("account.giftcodes", ["giftcodes" => $giftcodes]);
     }
 
     public function useGiftcode(Request $request, $id)

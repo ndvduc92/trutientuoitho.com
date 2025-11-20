@@ -525,7 +525,7 @@ class WarController extends Controller
         $hoachugam = "13347";
         $sachvip   = "84902";
 
-        // $gameApi = "http://202.92.6.133";
+        // $gameApi = "http://103.56.160.134";
         // $client  = new \GuzzleHttp\Client();
 
         // foreach ($matchResults as $player) {
@@ -683,7 +683,7 @@ class WarController extends Controller
     public function top3()
     {
         $tops    = ["4416", "5714", "8784", "1808", "19424", "8016"];
-        $gameApi = "http://202.92.6.133";
+        $gameApi = "http://103.56.160.134";
         $client  = new \GuzzleHttp\Client();
         foreach ($tops as $char) {
             $client->request('POST', $gameApi . '/api/mail.php', ["form_params" => [
@@ -757,7 +757,7 @@ class WarController extends Controller
         $camnang   = "84154";
         $tithu     = "84139";
 
-        $gameApi = "http://202.92.6.133";
+        $gameApi = "http://103.56.160.134";
         $client  = new \GuzzleHttp\Client();
 
         // --- HÀM PHỤ: gửi quà ---
@@ -794,7 +794,7 @@ class WarController extends Controller
             ['id' => $hoachugam, 'count' => 200],
             ['id' => '77092', 'count' => 5],
             ['id' => '77093', 'count' => 5],
-            ['id' => '78999', 'count' => 5]
+            ['id' => '78999', 'count' => 5],
         ];
 
         // --- Phần thưởng phe thua ---
@@ -807,7 +807,7 @@ class WarController extends Controller
             ['id' => $hoachugam, 'count' => 150],
             ['id' => '77092', 'count' => 5],
             ['id' => '77093', 'count' => 5],
-            ['id' => '78999', 'count' => 5]
+            ['id' => '78999', 'count' => 5],
         ];
 
         // $top = [1504, 8784];
@@ -864,7 +864,7 @@ class WarController extends Controller
         // $camnang   = "84154";
         // $tithu     = "84139";
 
-        // $gameApi = "http://202.92.6.133";
+        // $gameApi = "http://103.56.160.134";
         // $client  = new \GuzzleHttp\Client();
         // return 1;
         // $aa = [1472];

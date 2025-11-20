@@ -37,8 +37,8 @@ class Transaction extends Model
 
     public function getCoinValue() {
         if ($this->type == "knb") {
-            return $this->knb_amount * 1000 / 3;
+            return $this->knb_amount * 1000;
         }
-        return $this->knb_amount / 3;
+        return $this->knb_amount;
     }
 }
