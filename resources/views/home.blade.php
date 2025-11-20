@@ -3,14 +3,13 @@
 @include('layouts.menu')
 <style>
     body {
-        background: url(/assets/bg.jpg) no-repeat bottom center;
+        background: url(/assets/bg-blue-1.webp) no-repeat bottom center;
     }
 </style>
 
 <!-- Header -->
 @include('layouts.video')
 <!-- Main -->
-@include('layouts.reward')
 @include('layouts.new2')
 
 @include('layouts.class')
@@ -19,9 +18,6 @@
 
 @include('layouts.features')
 
-<!-- GameInfo -->
-@include('layouts.info')
-<!-- Popup -->
 @endsection
 
 @section('script')

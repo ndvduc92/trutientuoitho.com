@@ -10,23 +10,23 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos</title>
+    <title>Tru Tiên Tuổi Thơ - Phiên Bản 14 class</title>
     <meta name="keywords"
-        content="Jade Dynasty,Tru Tiên,Game Tru Tiên, Tru Tiên private, Tru Tiên 18 class, tru tien 18 class, tru tien private">
-    <meta name="description" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos">
+        content="Jade Dynasty,Tru Tiên,Game Tru Tiên, Tru Tiên private, Tru Tiên 14 class, tru tien 14 class, tru tien private">
+    <meta name="description" content="Tru Tiên Tuổi Thơ - Phiên Bản 14 class">
     <!-- <meta property="og:title" content='"Jade Dynasty: New Fantasy" Mobile Game Official Website - New JD Mobile Game' id="meta_title"> -->
-    <meta property="og:title" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos" id="meta_title">
-    <meta property="og:description" content="《Tru Tiên Hỗn Thế》Zhuxian - Age of Chaos - Đỉnh cao game PC 2024.">
-    <meta property="og:site_name" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos" id="meta_name">
+    <meta property="og:title" content="Tru Tiên Tuổi Thơ - Phiên Bản 14 class" id="meta_title">
+    <meta property="og:description" content="《Tru Tiên Tuổi Thơ》Zhuxian - 14 class - Đỉnh cao game PC 2025.">
+    <meta property="og:site_name" content="Tru Tiên Tuổi Thơ - Phiên Bản 14 class" id="meta_name">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="/index.html" id="meta_url">
     <meta property="og:image" content="/assets/share.jpg">
     <!-- icon -->
-    <link rel="apple-touch-icon" href="/assets/icon.png">
-    <link rel="icon" type="image/png" href="/assets/icon.png">
-    <link rel="shortcut icon" href="/assets/icon.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico">
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon.ico" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
@@ -44,21 +44,18 @@
     <!-- Nav** -->
     @yield('content')
 
-    <!-- Footer -->
-    <footer>
+    <section class="gameinfo">
         <div class="container">
-            <div class="copyright">
-                <div class="company">
-                    <img src="/assets/wmlogo_en_black.png">
-                </div>
-                <p>
-                    <a href="#" target="_blank">Terms of Service</a>｜<a href="#" target="_blank">Privacy
-                        Policy</a><br>© 2024 Age
-                    of Chaos. All rights reserved.
-                </p>
-            </div>
+            <div class="game text-center">
+                                <h3>Tru Tiên Tuổi Thơ - Phiên bản 14 class</h3>
+                                <p>
+                                    Thể loại: MMORPG <br>
+                                    Siêu phẩm PC 2025 Tru Tiên<br>
+                                    <span>Tru Tiên trải nghiệm phiên bản 14+ class, cày cuốc nhẹ nhàng, không try-hard, không pay-to-win.</span>
+                                </p>
+                            </div>
         </div>
-    </footer>
+    </section>
     <script src="/assets/js/swiper-bundle.min.js"></script>
     <script src="/assets/js/sea-gameSwiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

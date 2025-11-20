@@ -10,6 +10,7 @@
         <div class="logo"><img class="img-fluid" src="/assets/logo.png"></div>
         <a class="btn_video" href="/tai-game" target="_blank">
             <img class="rotate" src="/assets/btn_video_frame.png">
+            <img src="/assets/newlogo.png">
         </a>
     </div>
     <style>

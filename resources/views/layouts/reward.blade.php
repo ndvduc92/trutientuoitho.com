@@ -45,7 +45,7 @@
         <div class="rewards_txt t2">
             <h4>+50% KNB nạp</h4>
             <div>
-                Chặng đường khám phá Tru Tiên Hỗn Thế sẽ thuận lợi hơn với chương trình khuyến mãi +50% Kim Nguyên
+                Chặng đường khám phá Tru Tiên Tuổi Thơ sẽ thuận lợi hơn với chương trình khuyến mãi +50% Kim Nguyên
                 Bảo khi nạp vào tài khoản. Thao tác tại trang web id.trutienhonthe.com. Lưu ý chương trình chỉ diễn
                 ra trong một thời gian nhất định.
             </div>
@@ -59,28 +59,28 @@
         <div class="rewards_txt t4">
             <h4>Giftcode Fan Cứng</h4>
             <div>
-                Đồng hành cùng Fanpage Tru Tiên Hỗn Thế và trở thành Fan Cứng để nhận những quà tặng đặc biệt.
+                Đồng hành cùng Fanpage Tru Tiên Tuổi Thơ và trở thành Fan Cứng để nhận những quà tặng đặc biệt.
             </div>
         </div>
         <div class="rewards_txt t5">
             <h4>Tôn hiệu đặc biệt</h4>
             <div>
                 Tham gia hoạt động ingame để nhận các tôn hiệu được thiết kế riêng cho những người chơi đạt được
-                thành tựu đặc biệt trong Tru Tiên Hỗn Thế. Nội dung chi tiết sẽ được thông báo trên trang chủ và
+                thành tựu đặc biệt trong Tru Tiên Tuổi Thơ. Nội dung chi tiết sẽ được thông báo trên trang chủ và
                 Fanpage.
             </div>
         </div>
         <div class="rewards_txt t6">
             <h4>Giftcode Quảng Bá</h4>
             <div>
-                Phần thưởng hấp dẫn cho những người chơi nhiệt tình quảng bá Tru Tiên Hỗn Thế đến với bạn bè.
+                Phần thưởng hấp dẫn cho những người chơi nhiệt tình quảng bá Tru Tiên Tuổi Thơ đến với bạn bè.
             </div>
         </div>
         <div class="rewards_txt t7">
             <h4>Phần Thưởng Đua TOP</h4>
             <div>
                 Cao thủ top level sẽ nhận được những phần thưởng vô cùng giá trị, giúp cho hành trình khám phá thế
-                giới Tru Tiên Hỗn Thế được thuận lợi hơn.
+                giới Tru Tiên Tuổi Thơ được thuận lợi hơn.
             </div>
         </div>
         <div class="popup_close" style="font-size: 16px; cursor: pointer">&#x2715;</div>

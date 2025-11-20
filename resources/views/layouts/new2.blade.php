@@ -1,4 +1,4 @@
-<div class="section-1">
+<div class="section-1 mt-4">
     <div class="container">
         <div class="swiper-container banner-slider swiper-container-initialized swiper-container-horizontal">
             <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">

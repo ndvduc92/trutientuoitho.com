@@ -224,6 +224,7 @@ header .container {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 25%;
 }
 
 .rotate {
@@ -1356,8 +1357,12 @@ main {
 /*---- gameinfo ----*/
 .gameinfo {
   padding: 2rem 0;
-  background: url(/assets/gameinfo_bg.jpg) no-repeat center top;
   background-size: cover;
+  color: #7a7a7a;
+    padding: 40px 0;
+    position: relative;
+    background: #171c22;
+    font-size: 14px;
 }
 
 .gameinfo .icon {

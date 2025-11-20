@@ -8,12 +8,12 @@
     <div style="margin-bottom: 144px">
         @include('layouts.event')
     </div>
-    
+
     @include('layouts.info')
 </div>
 <style>
     body {
-        background: url(/assets/bg.jpg) no-repeat bottom center;
+        background: url(/assets/bg-blue-1.webp) no-repeat bottom center;
     }
 </style>
 @endsection

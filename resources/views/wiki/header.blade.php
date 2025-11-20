@@ -1,7 +1,7 @@
 <section id="nhanvat" class="one">
     <h1>Hướng dẫn cơ bản trong game</h1>
     <img src="/wiki/assets/canhdao.png" alt="">
-    <p class="lead">Cảm ơn bạn đã đồng hành cùng Tru Tiên Hỗn Thế.</p>
+    <p class="lead">Cảm ơn bạn đã đồng hành cùng Tru Tiên Tuổi Thơ.</p>
     <hr>
     <div class="row">
         <div class="col-sm-6 col-lg-4">

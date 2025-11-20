@@ -10,14 +10,14 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos</title>
+    <title>Tru Tiên Tuổi Thơ: Zhuxian - Age of Chaos</title>
     <meta name="keywords"
         content="Jade Dynasty,Tru Tiên,Game Tru Tiên, Tru Tiên private, Tru Tiên 18 class, tru tien 18 class, tru tien private">
-    <meta name="description" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos">
+    <meta name="description" content="Tru Tiên Tuổi Thơ: Zhuxian - Age of Chaos">
     <!-- <meta property="og:title" content='"Jade Dynasty: New Fantasy" Mobile Game Official Website - New JD Mobile Game' id="meta_title"> -->
-    <meta property="og:title" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos" id="meta_title">
-    <meta property="og:description" content="《Tru Tiên Hỗn Thế》Zhuxian - Age of Chaos - Đỉnh cao game PC 2024.">
-    <meta property="og:site_name" content="Tru Tiên Hỗn Thế: Zhuxian - Age of Chaos" id="meta_name">
+    <meta property="og:title" content="Tru Tiên Tuổi Thơ: Zhuxian - Age of Chaos" id="meta_title">
+    <meta property="og:description" content="《Tru Tiên Tuổi Thơ》Zhuxian - Age of Chaos - Đỉnh cao game PC 2024.">
+    <meta property="og:site_name" content="Tru Tiên Tuổi Thơ: Zhuxian - Age of Chaos" id="meta_name">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="/index.html" id="meta_url">
@@ -209,7 +209,6 @@
     <!-- Custom Script -->
     <script src="/wiki/assets/js/theme.js"></script>
     <script>
-
         $(".nav-link").click(function() {
             const hash = $(this).attr("href")
             window.location.hash = hash

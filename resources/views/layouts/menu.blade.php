@@ -1,6 +1,5 @@
 <nav>
     <div class="container">
-        <a class="iw_logo" href="/"><img src="/assets/wmlogo_en_black.png"></a>
         <div class="menu">
             <ul>
                 <li><a href="/" class="home">Trang Chủ</a></li>
