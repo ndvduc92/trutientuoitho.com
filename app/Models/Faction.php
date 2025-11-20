@@ -37,4 +37,15 @@ class Faction extends Model
         }
         return $sum;
     }
+
+    public function getAllMember() {
+        $members = [];
+        foreach ($this->families as $item) {
+            foreach ($item->chars as $char) {
+                //\Log::info($char->char_id."----".Char::where("char_id", $char->char_id)->first()->name);
+                $members[] = $char->char_id;
+            }
+        }
+        return $members;
+    }
 }

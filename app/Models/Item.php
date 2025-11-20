@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,6 +12,6 @@ class Item extends Model
 
     public function getImageAttribute()
     {
-        return "https://id.trutienhonthe.com/icons/".$this->itemid.".png";
+        return "https://items.trutiendailuc.com/icons/" . $this->itemid . ".png";
     }
 }

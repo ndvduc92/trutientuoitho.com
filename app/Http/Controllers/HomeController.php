@@ -1,17 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Char;
-use App\Models\Kill;
-use App\Models\Post;
-use DB;
-use Carbon\Carbon;
-
-use App\Models\Bet;
-use App\Models\Logging;
-use App\Models\PkBoss;
 use App\Models\Chat;
+use App\Models\Kill;
+use Carbon\Carbon;
+use DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
@@ -20,12 +14,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $date = "2025/01/09";
-        $last = [];
-        $pk = [];
-        $posts = Post::latest()->limit(5)->get();
-        //$pk = Char::whereNot("kill", 0)->orderBy("kill", "desc")->limit(50)->get();
-        return view('home', compact("posts", "pk", "last", "date"));
+        return view('home');
     }
 
     private function lastWars()
@@ -36,11 +25,11 @@ class HomeController extends Controller
     private function wars($date = null)
     {
 
-        $kill = Kill::groupBy('kill')->select('kill', DB::raw('count(*) as total'))->orderBy("total", "DESC")->get();
+        $kill      = Kill::groupBy('kill')->select('kill', DB::raw('count(*) as total'))->orderBy("total", "DESC")->get();
         $be_killed = Kill::groupBy('be_killed')->select('be_killed', DB::raw('count(*) as total'))->get();
 
         if ($date) {
-            $kill = Kill::whereDate('date', '=', Carbon::parse($date)->format("Y/m/d"))->groupBy('kill')->select('kill', DB::raw('count(*) as total'))->orderBy("total", "DESC")->get();
+            $kill      = Kill::whereDate('date', '=', Carbon::parse($date)->format("Y/m/d"))->groupBy('kill')->select('kill', DB::raw('count(*) as total'))->orderBy("total", "DESC")->get();
             $be_killed = Kill::whereDate('date', '=', Carbon::parse($date)->format("Y/m/d"))->groupBy('be_killed')->select('be_killed', DB::raw('count(*) as total'))->get();
         }
 
@@ -59,16 +48,16 @@ class HomeController extends Controller
         $names = Char::with("user")->whereIn("char_id", $chars)->get();
 
         foreach ($chars as $char) {
-            $kills = collect($kill)->firstWhere('kill', $char);
+            $kills      = collect($kill)->firstWhere('kill', $char);
             $be_killeds = collect($be_killed)->firstWhere('be_killed', $char);
-            $char = [
-                "char_id" => $char,
+            $char       = [
+                "char_id"    => $char,
                 "class_icon" => collect($names)->firstWhere('char_id', $char)["class_icon"],
                 "class_name" => collect($names)->firstWhere('char_id', $char)["class_name"],
-                "user_id" => collect($names)->firstWhere('char_id', $char)["user"]["id"],
-                "name" => collect($names)->firstWhere('char_id', $char)["name"],
-                "kill" => $kills ? $kills["total"] : 0,
-                "be_killed" => $be_killeds ? $be_killeds["total"] : 0,
+                "user_id"    => collect($names)->firstWhere('char_id', $char)["user"]["id"],
+                "name"       => collect($names)->firstWhere('char_id', $char)["name"],
+                "kill"       => $kills ? $kills["total"] : 0,
+                "be_killed"  => $be_killeds ? $be_killeds["total"] : 0,
             ];
             $res[] = $char;
         }
@@ -77,7 +66,7 @@ class HomeController extends Controller
             ['kill', 'desc'],
             ['be_killed', 'asc'],
         ]);
-         
+
         $res = $sorted->values()->all();
 
         return $res;
@@ -126,7 +115,7 @@ class HomeController extends Controller
     public function pk()
     {
         if (request()->refresh) {
-            $client = new \GuzzleHttp\Client();
+            $client   = new \GuzzleHttp\Client();
             $gameApi  = "https://id.trutienvietnam.com/api/kill";
             $response = $client->request("GET", $gameApi, [
                 "headers" => [
@@ -186,5 +175,10 @@ class HomeController extends Controller
         $chat->color   = "yellow";
         $chat->save();
         return back()->with("success", "Thành công!");
+    }
+
+    public function account()
+    {
+        return view("account.home");
     }
 }

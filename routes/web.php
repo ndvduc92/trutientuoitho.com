@@ -63,7 +63,7 @@ Route::group(['prefix' => 'account'], function () {
     Route::get('/quen-mat-khau/otp', [PasswordController::class, 'forgotPasswordChangeGet']);
     Route::post('/quen-mat-khau/otp', [PasswordController::class, 'forgotPasswordChangePost']);
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('/', [HomeController::class, 'home'])->name("home");
+        Route::get('/', [HomeController::class, 'account'])->name("account");
         Route::group(['prefix' => 'shop-xu-war'], function () {
             Route::get('/', [WarController::class, 'getShop'])->name("shop-war");
             Route::post('/', [WarController::class, 'postShop']);
@@ -84,7 +84,7 @@ Route::group(['prefix' => 'account'], function () {
 
         Route::get('/logout', function () {
             Auth::logout();
-            return redirect("/dang-nhap");
+            return redirect("/account/dang-nhap");
         });
 
         Route::group(['prefix' => 'knb'], function () {

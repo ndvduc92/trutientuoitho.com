@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -40,7 +39,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'password'          => 'hashed',
     ];
 
     public function getLoginField($loginValue)
@@ -48,27 +47,43 @@ class User extends Authenticatable
         return "username";
     }
 
-    public function chars() {
+    public function chars()
+    {
         return Char::where("userid", $this->userid)->get();
     }
 
-    public function char() {
+    public function vips()
+    {
+        return $this->hasMany(Vip::class);
+    }
+
+    public function char()
+    {
         return $this->belongsTo(Char::class, "main_id", "char_id");
     }
 
-    public function getMain() {
+    public function getMain()
+    {
         return $this->char ? $this->char->getName() : "Chưa tạo nhân vật";
     }
 
-    public function getOnline($char_id) {
+    public function getOnline($char_id)
+    {
         return $this->is_online & $this->main_id == $char_id ? "<span class='btn btn-sm btn-success'>Online<span>" : "";
     }
 
-    public function guild() {
+    public function guild()
+    {
         return $this->hasOne(GuildUser::class);
     }
 
-    public function isAdminGuild() {
+    public function isAdminGuild()
+    {
         return $this->guild && $this->guild->role == "admin";
+    }
+
+    public function warCoin()
+    {
+        return $this->war_point - $this->war_point_used;
     }
 }

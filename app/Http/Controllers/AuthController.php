@@ -55,17 +55,7 @@ class AuthController extends Controller
 
     public function signup()
     {
-
-// Test database connection
-        try {
-            DB::connection()->getPdo();
-        } catch (\Exception $e) {
-            die("Could not connect to the database.  Please check your configuration. error:" . $e);
-        }
-        if (Auth::check()) {
-            return redirect("/");
-        }
-        return view('auth.signup');
+        return view('account.auth.signup');
     }
 
     public function signin()
@@ -86,7 +76,7 @@ class AuthController extends Controller
             $user->save();
             return redirect("/");
         }
-        return view('auth.signin');
+        return view('account.auth.signin');
     }
 
     public function chars()
@@ -264,9 +254,9 @@ class AuthController extends Controller
             $user             = Auth::user();
             $user->last_login = date("Y-m-d H:i:s");
             $user->save();
-            return redirect('/');
+            return redirect('/account');
         } else {
-            return redirect("/dang-nhap")->with('error', 'Thông tin đăng nhập không chính xác');
+            return redirect("/account/dang-nhap")->with('error', 'Thông tin đăng nhập không chính xác');
         }
     }
 
