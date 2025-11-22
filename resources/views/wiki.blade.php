@@ -21,7 +21,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="/index.html" id="meta_url">
-    <meta property="og:image" content="/assets/share.jpg">
+    <meta property="og:image" content="/assets/share.png">
     <!-- icon -->
     <link rel="apple-touch-icon" href="/assets/icon.png">
     <link rel="icon" type="image/png" href="/assets/icon.png">

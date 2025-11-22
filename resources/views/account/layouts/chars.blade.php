@@ -13,7 +13,7 @@
   document.getElementById('char').addEventListener('change', function() {
     const charId = (this.value);
     if (charId === "0") {
-        window.location.href = "/chars";
+        window.location.href = "/account/chars";
       } else {
         window.location.href = `/account/set_main_char/${charId}`;
       }

@@ -12,7 +12,7 @@
                         <h4 class="alert-heading">⛔ Một số lưu ý</h4>
                         <p class="text-primary fw-bold">
                         ❌ Chọn lại nhân vật nhận giftcode từ menu trên cùng <span class="text-danger fw-bold">[{{Auth::user()->char ? Auth::user()->char?->getName() : "Chưa có nhân vật" }}]</span><br>
-                        ❌ Hãy chắc chắn rằng bạn đã kiểm tra hộp thư trong game trước khi nhận quà. !<br>
+                        ❌ Hãy chắc chắn rằng bạn đã kiểm tra hộp thư trong game trước khi nhận quà.<br>
                         ❌ Mỗi tài khoản chỉ được nhận duy nhất một lần.
                     </p>
 

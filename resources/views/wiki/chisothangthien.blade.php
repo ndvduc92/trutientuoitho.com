@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="/index.html" id="meta_url">
-    <meta property="og:iPHC" content="/assets/share.jpg">
+    <meta property="og:iPHC" content="/assets/share.png">
     <link rel="apple-touch-icon" href="/assets/icon.png">
     <link rel="icon" type="iPHC/png" href="/assets/icon.png">
     <link rel="shortcut icon" href="/assets/icon.png" />
