@@ -5,7 +5,7 @@ $currentRoute = Route::currentRouteName();
 <ul class="sidebar-nav">
     <li class="sidebar-item">
         <a class='sidebar-link' href='/account'>
-            <i class="align-middle" data-feather="slack"></i> <span class="align-middle">Đại Sảnh</span>
+            <i class="align-middle me-2 fas fa-fw fa-user-ninja"></i> <span class="align-middle">Đại Sảnh</span>
         </a>
     </li>
 
@@ -29,21 +29,21 @@ $currentRoute = Route::currentRouteName();
         </a>
     </li>
 
-    <li class="sidebar-item {{ $currentRoute == 'shops' ? 'active' : null }}">
-        <a class='sidebar-link' href='#'>
-            <i class="align-middle me-2 fas fa-fw fa-paper-plane"></i> <span class="align-middle">Cửa
-                Hàng</span>
-        </a>
-    </li>
+    <!--<li class="sidebar-item {{ $currentRoute == 'shops' ? 'active' : null }}">-->
+    <!--    <a class='sidebar-link' href='#'>-->
+    <!--        <i class="align-middle me-2 fas fa-fw fa-paper-plane"></i> <span class="align-middle">Cửa-->
+    <!--            Hàng</span>-->
+    <!--    </a>-->
+    <!--</li>-->
 
 
-    <li class="sidebar-item">
-        <a class='sidebar-link' href='/account/rung-cay'>
-            <i class="align-middle me-2 fas fa-fw fa-tree"></i> <span class="align-middle">Rung
-                Cây</span>
-            <span class="sidebar-badge badge bg-danger">Mới</span>
-        </a>
-    </li>
+    <!--<li class="sidebar-item">-->
+    <!--    <a class='sidebar-link' href='/account/rung-cay'>-->
+    <!--        <i class="align-middle me-2 fas fa-fw fa-tree"></i> <span class="align-middle">Rung-->
+    <!--            Cây</span>-->
+    <!--        <span class="sidebar-badge badge bg-danger">Mới</span>-->
+    <!--    </a>-->
+    <!--</li>-->
 
     <li class="sidebar-item">
         <a class='sidebar-link' href='/account/logout'>
