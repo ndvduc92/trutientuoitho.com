@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rung Cây Nhận Vật Phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      text-align: center;
+      padding: 20px;
+    }
+    .tree-container {
+      position: relative;
+      width: 600px;
+      margin: auto;
+    }
+    .tree-img {
+      width: 100%;
+      user-select: none;
+    }
+    .item {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.2s ease;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .free { background: #7fcf8a; }
+    .buy { background: #e8c045; }
+    .basket { background: #5ca3d1; color: white; }
+  </style>
+</head>
+<body>
+  <h2>Rung Cây Nhận Vật Phẩm</h2>
+  <div class="tree-container">
+    <img src="https://media.craiyon.com/2025-08-07/jDmsCuSFQoW6SRtL6fka7Q.webp" class="tree-img" />
+
+    <!-- Example items on tree -->
+    <img src="https://items.trutiendailuc.com/icons/63521.png" class="item" style="top: 40px; left: 140px;" />
+    <img src="https://items.trutiendailuc.com/icons/63522.png" class="item" style="top: 20px; left: 260px;" />
+    <img src="https://items.trutiendailuc.com/icons/63523.png" class="item" style="top: 80px; left: 350px;" />
+  </div>
+
+  <div class="buttons">
+    <button class="free">Miễn phí (1/1)</button>
+    <button class="buy">Mua thêm lượt</button>
+    <button class="basket">Giỏ trái cây</button>
+  </div>
+
+  <script>
+    const tree = document.querySelector('.tree-container');
+    const items = document.querySelectorAll('.item');
+
+    function shakeTree() {
+      items.forEach(item => {
+        const dx = (Math.random() - 0.5) * 80;
+        const dy = (Math.random() - 0.5) * 80;
+        item.style.transform = `translate(${dx}px, ${dy}px)`;
+        setTimeout(() => {
+          item.style.transform = "translate(0,0)";
+        }, 400);
+      });
+    }
+
+    document.querySelector('.free').addEventListener('click', shakeTree);
+  </script>
+</body>
+</html>

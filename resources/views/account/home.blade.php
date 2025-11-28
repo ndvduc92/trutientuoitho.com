@@ -23,7 +23,7 @@
           <div class="mb-3 row">
             <label class="col-form-label col-sm-2 text-sm-start">Email</label>
             <div class="col-sm-10">
-              <input disabled type="" class="form-control form-control-lg" value="{{Auth::user()->email}}">
+              <input disabled type="" class="form-control form-control-lg" value="{{Auth::user()->email2}}">
             </div>
           </div>
           <div class="mb-3 row">

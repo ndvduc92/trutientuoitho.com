@@ -11,6 +11,7 @@ use App\Http\Controllers\IngameController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\KnbController;
 use App\Http\Controllers\LoggingController;
+use App\Http\Controllers\TreeController;
 use App\Http\Controllers\PackController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\QuestController;
@@ -105,9 +106,9 @@ Route::group(['prefix' => 'account'], function () {
 
         Route::get('/nap-tien', [DepositController::class, 'getNapTien'])->name("payment");
 
-        Route::get('/ruong-may-man', [ShakeController::class, 'shake'])->name("shake");
-        Route::post('/ruong-may-man', [ShakeController::class, 'postWheelItem']);
-        Route::post('/ruong-may-man/mua-luot', [ShakeController::class, 'addLuot']);
+        Route::get('/rung-cay', [TreeController::class, 'shake'])->name("shake");
+        Route::post('/rung-cay', [TreeController::class, 'postWheelItem']);
+        Route::post('/rung-cay/mua-luot', [TreeController::class, 'addLuot']);
 
         // Route::get('/tam-bao', [ShakeController::class, 'shake'])->name("tambao");
         // Route::post('/tam-bao', [ShakeController::class, 'postWheelItem']);
