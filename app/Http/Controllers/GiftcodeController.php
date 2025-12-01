@@ -34,7 +34,7 @@ class GiftcodeController extends Controller
     {
         $user = Auth::user();
         if (! $user->main_id) {
-            return back()->with("error", "Vui lòng vào game tạo nhân vật!!");
+            return back()->with("error", "Chưa chọn nhân vật!!");
         }
         $userGiftcode = GiftcodeUser::where(["user_id" => $user->id, "giftcode_id" => $id])->first();
         if ($userGiftcode) {
@@ -69,7 +69,7 @@ class GiftcodeController extends Controller
                     "itemid"   => $item->itemid,
                     "count"    => $item->quantity,
                     "proctype" => $item->bind,
-                    "msg"      => "Giftcode " . $code->giftcode,
+                    "msg"      => "[Quà Tặng][" . $code->giftcode."]",
                 ]);
             }
 

@@ -11,7 +11,7 @@
                     <div class="alert-message">
                         <h4 class="alert-heading">⛔ Một số lưu ý</h4>
                         <p class="text-primary fw-bold">
-                        ❌ Chọn lại nhân vật nhận giftcode từ menu trên cùng <span class="text-danger fw-bold">[{{Auth::user()->char ? Auth::user()->char?->getName() : "Chưa có nhân vật" }}]</span><br>
+                        ❌ Chọn lại nhân vật nhận giftcode từ menu trên cùng  <br>
                         ❌ Hãy chắc chắn rằng bạn đã kiểm tra hộp thư trong game trước khi nhận quà.<br>
                         ❌ Mỗi tài khoản chỉ được nhận duy nhất một lần.
                     </p>
@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th style="width:40%;">Giftcode</th>
+                            <th style="width:40%;">Thời Hạn</th>
                             <th style="width:25%">Trạng Thái</th>
                         </tr>
                     </thead>
@@ -29,6 +30,7 @@
                         @foreach($giftcodes as $item)
                         <tr>
                             <td>{{ ($item->giftcode) }}</td>
+                            <td>Vĩnh Viễn</td>
                             <td class="d-none d-md-table-cell">
                                 <div class="flex items-center">
                         @if ($item->beUsedByUser())

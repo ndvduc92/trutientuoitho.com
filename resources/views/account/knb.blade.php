@@ -25,7 +25,7 @@
                     <div class="mb-3 row">
                         <label class="col-form-label col-sm-2 text-sm-start"></label>
                         <div class="col-sm-10">
-                            <i class="fas fa-info-circle"></i> Tỉ lệ: 1000 xu = 1 KNB
+                            <i class="fas fa-info-circle"></i> Tỉ lệ: 1000 xu = 2 KNB
                         </div>
                     </div>
 

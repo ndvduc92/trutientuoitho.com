@@ -68,18 +68,18 @@ class KnbController extends Controller
             DB::beginTransaction();
             $this->callGameApi("POST", "/api/knb.php", [
                 "userid" => $user->userid,
-                "cash"   => intval($xu / 10),
+                "cash"   => intval($xu / 10) * 2,
             ]);
             $user->balance = intval($user->balance) - $xu;
             $user->save();
 
             $transaction             = new Transaction;
             $transaction->user_id    = $user->id;
-            $transaction->knb_amount = intval($xu / 1000);
+            $transaction->knb_amount = intval($xu / 1000) * 2;
             $transaction->type       = "knb";
             $transaction->save();
             DB::commit();
-            return back()->with("success", "Đã chuyển " . intval($xu / 1000) . " KNB vào game thành công!");
+            return back()->with("success", "Đã chuyển " . (intval($xu / 1000) * 2). " KNB vào game thành công!");
         } catch (\Throwable $th) {
             DB::rollback();
             return back()->with("error", "Có lỗi xảy ra, vui lòng liên hệ GM!");

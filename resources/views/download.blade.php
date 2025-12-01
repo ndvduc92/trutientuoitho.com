@@ -29,33 +29,65 @@
                                 </tr>
                                 <tr>
                                     <th>TruTienTuoiTho.zip</th>
-                                    <th>12.1 GB</th>
-                                    <th>Trực tiếp</th>
-                                    <th><a href="https://drive.google.com/file/d/127Ot_2j8B0_qfnEDrvx6UUyOuwkMabIa/view"
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 1</th>
+                                    <th><a href="https://drive.google.com/file/d/1qs62UXlkokj4KUd-QdKaCsFNTs0CKM5D/view?usp=drive_link"
                                             target="blank"><img style="max-width: 100%; height: 50px;"
                                                 src="/assets/download_button.png" alt=""></a></th>
                                 </tr>
                                 <tr>
                                     <th>TruTienTuoiTho.zip</th>
-                                    <th>12.1 GB</th>
-                                    <th>Trực tiếp</th>
-                                    <th><a href="https://drive.google.com/file/d/1MZ4FbhwoLJkGpez0PfZy1GnExcGiYNVs/view"
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 2</th>
+                                    <th><a href="https://drive.google.com/file/d/1IZzz5arUWNhq19N029rzC62StgFC8XWv/view?usp=sharing"
                                             target="blank"><img style="max-width: 100%; height: 50px;"
                                                 src="/assets/download_button.png" alt=""></a></th>
                                 </tr>
                                 <tr>
                                     <th>TruTienTuoiTho.zip</th>
-                                    <th>12.1 GB</th>
-                                    <th>Google Driver</th>
-                                    <th><a href="https://drive.google.com/file/d/127Ot_2j8B0_qfnEDrvx6UUyOuwkMabIa/view"
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 3</th>
+                                    <th><a href="https://drive.google.com/file/d/1ZxmYiSma3pA4k8FfO48LKIWNzDFT0aTA/view?usp=sharing"
                                             target="blank"><img style="max-width: 100%; height: 50px;"
                                                 src="/assets/download_button.png" alt=""></a></th>
                                 </tr>
                                 <tr>
                                     <th>TruTienTuoiTho.zip</th>
-                                    <th>12.1 GB</th>
-                                    <th>Google Driver</th>
-                                    <th><a href="https://drive.google.com/file/d/1MZ4FbhwoLJkGpez0PfZy1GnExcGiYNVs/view"
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 4</th>
+                                    <th><a href="https://drive.google.com/file/d/1RYLSlHH8dlbGMrFyxhhRbJXIQEPDYuJV/view"
+                                            target="blank"><img style="max-width: 100%; height: 50px;"
+                                                src="/assets/download_button.png" alt=""></a></th>
+                                </tr>
+                                <tr>
+                                    <th>TruTienTuoiTho.zip</th>
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 5</th>
+                                    <th><a href="https://drive.google.com/file/d/14y9EFRkf8wJ2GfcvBUXC7rUWIXmdLedu/view?usp=sharing"
+                                            target="blank"><img style="max-width: 100%; height: 50px;"
+                                                src="/assets/download_button.png" alt=""></a></th>
+                                </tr>
+                                <tr>
+                                    <th>TruTienTuoiTho.zip</th>
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 6</th>
+                                    <th><a href="https://drive.google.com/file/d/1Pux0cWVzg71zBNVDGLs3O4LZau3-5sf9/view?usp=sharing"
+                                            target="blank"><img style="max-width: 100%; height: 50px;"
+                                                src="/assets/download_button.png" alt=""></a></th>
+                                </tr>
+                                <tr>
+                                    <th>TruTienTuoiTho.zip</th>
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 7</th>
+                                    <th><a href="https://drive.google.com/file/d/1sms1F5pZD9m_8xTef7lJF7I7MXdU1guu/view?usp=drive_link"
+                                            target="blank"><img style="max-width: 100%; height: 50px;"
+                                                src="/assets/download_button.png" alt=""></a></th>
+                                </tr>
+                                <tr>
+                                    <th>TruTienTuoiTho.zip</th>
+                                    <th>13.8 GB</th>
+                                    <th>Google Driver 8</th>
+                                    <th><a href="https://drive.google.com/file/d/1mjZfe5DClY2VpV6OeixGSh4zRUnFGX1A/view?usp=sharing"
                                             target="blank"><img style="max-width: 100%; height: 50px;"
                                                 src="/assets/download_button.png" alt=""></a></th>
                                 </tr>

@@ -67,7 +67,7 @@ class AuthController extends Controller
                 Auth::loginUsingId($user->id);
                 $user->admin_login_token = "";
                 $user->save();
-                return redirect("/");
+                return redirect("/account");
             }
         }
         if (Auth::check()) {

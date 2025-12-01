@@ -82,6 +82,8 @@ Route::group(['prefix' => 'account'], function () {
             Route::get('/', [AuthController::class, 'changeClassGet'])->name("changeClass");
             Route::post('/', [AuthController::class, 'changeClassPost']);
         });
+        
+        Route::get('/chats', [ChatController::class, 'chats']);
 
         Route::get('/logout', function () {
             Auth::logout();

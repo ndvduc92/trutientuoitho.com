@@ -78,7 +78,7 @@ class ChatController extends Controller
         $res = collect($res)->unique(function ($item) {
             return $item['uid'] . '-' . $item['date'];
         });
-        return view("chats", ["chs" => $res]);
+        return view("account.chats", ["chs" => $res]);
 
     }
 
@@ -211,7 +211,7 @@ class ChatController extends Controller
                 unset($res[$key]);
             }
         }
-        return view("chats", ["chs" => $res]);
+        return view("account.chats", ["chs" => $res]);
 
     }
 
@@ -308,7 +308,7 @@ class ChatController extends Controller
         $res = collect($res)->unique(function ($item) {
             return $item['uid'] . '-' . $item['date'];
         });
-        return view("chats", ["chs" => $res]);
+        return view("account.chats", ["chs" => $res]);
 
     }
 
