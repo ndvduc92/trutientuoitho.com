@@ -39,7 +39,7 @@
         <div class="card">
             <div class="card-header">
 
-                <h5 class="card-title mb-0">Lịch Sử Đổi KNB</h5>
+                <h5 class="card-title mb-0">Lịch Sử Đổi KNB ({{$sum}})</h5>
             </div>
             <div class="card-body">
 
