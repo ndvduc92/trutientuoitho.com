@@ -54,7 +54,7 @@
                     <tbody>
                         @foreach($knbs as $item)
                         <tr>
-                            <td>{{ number_format($item->getCoinValue()) }}đ</td>
+                            <td>{{ number_format($item->getCoinValue()/2) }}đ</td>
                             <td>{{ number_format(($item->knb_amount)) }}</td>
                             <td class="d-none d-md-table-cell">{{
                                 \Carbon\Carbon::parse($item->created_at)->format("d/m/Y H:i:s") }}</td>
