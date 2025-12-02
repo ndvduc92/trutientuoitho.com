@@ -18,7 +18,6 @@ class TreeController extends Controller
     {
         $wheel     = Wheel::with("items")->find(1);
         $items     = Wheel::with("items")->find(3)->items;
-        return $items->pluck('itemid')->toArray();
         $vip       = Wheel::with("items")->find(2);
         $coin      = Wheel::with("items")->find(3);
         $plus      = Shake::where("user_id", current_user()->id)->sum("count");
