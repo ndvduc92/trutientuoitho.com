@@ -125,32 +125,32 @@
     }
 
     .open-btn {
-  background: linear-gradient(135deg, #f7d774, #d4af37);
-  color: #2c1a00;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 14px 40px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+        background: linear-gradient(135deg, #f7d774, #d4af37);
+        color: #2c1a00;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 14px 40px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.open-btn:hover {
-  background: linear-gradient(135deg, #ffe58f, #e1b23c);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
-  transform: translateY(-2px) scale(1.05);
-}
+    .open-btn:hover {
+        background: linear-gradient(135deg, #ffe58f, #e1b23c);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+        transform: translateY(-2px) scale(1.05);
+    }
 
-.open-btn:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
-}
+    .open-btn:active {
+        transform: translateY(1px) scale(0.98);
+        box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
+    }
 
 
     .chest-btn.open {
@@ -195,7 +195,8 @@
     <div class="chest-actions">
         <button class="chest-btn free">🎁 Mở miễn phí (<span
                 id="numFree">{{$wheel->usedTimes("free")}}</span>/3)</button>
-        <button class="chest-btn open">📦 Thêm lượt (<span id="numPlus">{{$wheel->usedTimes("plus")}}</span>/{{$plus}})</button>
+        <button class="chest-btn open">📦 Thêm lượt (<span
+                id="numPlus">{{$wheel->usedTimes("plus")}}</span>/{{$plus}})</button>
         <button class="chest-btn buy" id="btnBuy">💰 Mua thêm lượt</button>
     </div>
 

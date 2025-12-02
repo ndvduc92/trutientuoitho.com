@@ -1,10 +1,10 @@
 <div id="them-luot" class="jade-modal2">
     <div class="modal-content">
         <div class="modal-header">
-            <h3>Mua thêm lượt</h3>
+            <h3>Mua thêm lượt rung cây</h3>
             <span class="close-btn" onclick="document.getElementById('them-luot').classList.remove('show');">×</span>
         </div>
-        <form class="modal-body" action="/ruong-may-man/mua-luot" method="POST">
+        <form class="modal-body" action="/account/rung-cay/mua-luot" method="POST">
             @csrf
             <div class="exchange-rate">
                 <span class="rate-text">Giá tiền 1 lượt: <span class="rate-value">10000 xu</span></span>
@@ -12,7 +12,8 @@
             <br>
             <div class="input-group">
                 <div class="input-with-suffix">
-                    <input placeholder="Số lượt mua thêm" name="count" type="number" id="ExchGAmount" class="form-control" maxlength="100" min="1">
+                    <input placeholder="Số lượt mua thêm" name="count" type="number" id="ExchGAmount"
+                        class="form-control" maxlength="100" min="1">
                 </div>
             </div>
 
@@ -30,88 +31,63 @@
     <div class="modal-content" style="width: 50%">
         <div class="modal-header">
             <h3>Túi đồ</h3>
-            <span class="close-btn"
-                onclick="document.getElementById('tui-do').classList.remove('show');">×</span>
+            <span class="close-btn" onclick="document.getElementById('tui-do').classList.remove('show');">×</span>
         </div>
         <div class="modal-body" style="text-align: left">
             <div style="margin-top:0px">
-                <p>Vui lòng <a href="">nhấn vào đây</a> để refresh lại trình duyệt nếu vật phẩm chưa vào túi</p>
-        <div class="bag-grid">
-            @foreach ($inventory as $item)
-            <div stack="{{$item->stack}}" itemname="{{$item->item->name}}" itemid="{{$item->id}}" class="item bag-slot vip-glow quality-legendary"
-                title="{{$item->item->name}}" style="cursor: pointer;">
-                <img src="{{$item->image}}" />
-                <div class="bag-count">{{$item->quantity}}</div>
-            </div>
-            @endforeach
-        </div>
-        <form action="/inventory" method="POST" hidden id="purchase-form">
-            @csrf
-            <div class="quantity-selector">
-                <label class="quantity-label" for="quantity"><span id="quantity"></span></label>
-                <input type="hidden" id="shop_id" name="shop_id" value="">
-            </div>
+                <div class="">
+                    <table class="table">
 
-            <!-- Purchase Button -->
-            <br>
-            <button class="btn-primary btn" type="submit" style="">
-                Chuyển vào game
-            </button>
-        </form>
+                        <tbody>
+                            @foreach($inventory as $item)
+                            <tr>
+                                <td>
+                                    <div class="item bag-slot vip-glow quality-legendary">
+                                        <img src="{{$item->image}}" />
+                                        <div class="bag-count">{{$item->quantity}}</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <form action="/account/inventory" method="POST" id="purchase-form">
+                                        @csrf
+                                        <div class="quantity-selector">
+                                            <input type="hidden" id="shop_id" name="shop_id" value="{{$item->id}}">
+                                        </div>
+                                        <button class="btn-primary btn" type="submit" style="">
+                                            Chuyển vào game
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
 
-    </div>
-        </div>
-    </div>
-</div>
-<div id="exchange-modal-giai-thuong" class="jade-modal2">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>Danh Sách Giải Thưởng</h3>
-            <span class="close-btn"
-                onclick="document.getElementById('exchange-modal-giai-thuong').classList.remove('show');">×</span>
-        </div>
-        <div class="modal-body award" style="text-align: left">
-            <style>
-                .award .stat-box {
-                    min-width: 80px;
-                    cursor: pointer;
-                }
+                </div>
 
-                .award .stat-box.active {
-                    background-color: red;
-                }
-            </style>
-            <div id="daily">
-                @foreach ($daily->items as $item)
-                <p>{{$loop->index + 1}}) {{$item->name}} x{{$item->quantity}} (Tỉ lệ: {{$item->ratio}}%)</p>
-                @endforeach
             </div>
         </div>
     </div>
 </div>
-<div id="exchange-modal-lich-su" class="jade-modal2">
-    <div class="modal-content" style="width: 60%">
-        <div class="modal-header">
-            <h3>Lịch sử nhận thưởng</h3>
-            <span class="close-btn"
-                onclick="document.getElementById('exchange-modal-lich-su').classList.remove('show');">×</span>
-        </div>
-        <div class="modal-body" style="text-align: left; max-height:500px; overflow: auto">
-            <table id="killers-table">
 
-                <tbody>
-                    @foreach($items as $item)
-                    <tr>
-                        <td><img src="{{$item->wheel_item->picture}}" alt="" /> {{ ($item->wheel_item->name) }} x{{
-                            ($item->wheel_item->quantity) }}</td>
-                        <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y H:i:s') }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<div class="modal fade" id="rewardModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title">🎁 Nhận Được Vật Phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img id="rewardImg" src="" style="width:80px;height:80px">
+                <h4 id="rewardName" class="mt-3"></h4>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+            </div>
         </div>
     </div>
 </div>
+
 
 <script>
     $('.shop-stats .stat-box').on('click', function () {
@@ -259,10 +235,7 @@
 </style>
 
 <style>
-
     .bag-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 64px);
         gap: 10px;
         padding: 16px;
         border-radius: 8px;

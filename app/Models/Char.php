@@ -130,27 +130,23 @@ class Char extends Model
     ];
 
     public const CLASS_ITEM = [
-        0      => "Chọn môn phái",
+        0      => "---------NHÂN TỘC-----------",
         100807 => "Thanh Vân Môn",
         100803 => "Thiên Âm Tự",
         100805 => "Quỷ Đạo",
         100804 => "Quỷ Vương Tông",
         100808 => "Hợp Hoan Phái",
         100806 => "Phần Hương Cốc",
-        1      => "--------------------",
+        1      => "---------THẦN DUỆ-----------",
         100810 => "Cửu Lê",
         100809 => "Liệt Sơn",
         100811 => "Hoài Quang",
         100813 => "Thái Hạo",
         100861 => "Thiên Hoa",
         100814 => "Thần Hoàng",
-        2      => "--------------------",
+        2      => "---------THIÊN MẠCH-----------",
         100816 => "Anh Chiêu",
-        100815 => "Khiên Cơ",
-        100817 => "Thanh La",
-        100822 => "Phá Quân",
-        100821 => "Quy Vân",
-        100820 => "Họa Ảnh",
+        100815 => "Khiên Cơ"
     ];
 
     public const MAPS = [

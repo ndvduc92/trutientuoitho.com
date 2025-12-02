@@ -17,18 +17,19 @@ class TreeController extends Controller
     public function shake()
     {
         $wheel     = Wheel::with("items")->find(1);
-        $daily     = Wheel::with("items")->find(1);
+        $items     = Wheel::with("items")->find(3)->items;
+        return $items->pluck('itemid')->toArray();
         $vip       = Wheel::with("items")->find(2);
         $coin      = Wheel::with("items")->find(3);
-        $items     = WheelUser::with("wheel_item", "wheel_item.item")->whereDate("created_at", Carbon::today())->where("user_id", current_user()->id)->latest()->get();
         $plus      = Shake::where("user_id", current_user()->id)->sum("count");
         $inventory = CharItem::where("char_id", current_user()->main_id)->with("item")->get();
-        return view("account.tree.index", compact("wheel", "items", "plus", "daily", "vip", "coin", "inventory"));
+        return view("account.tree.index", compact("wheel", "items", "plus", "coin", "inventory"));
     }
 
-    public function getWheelItem()
+    public function getWheelItem($type = "free")
     {
-        return Wheel::where("type", "daily")->first()->items;
+        $kieu = $type == "free" ? "daily" : "coin";
+        return Wheel::where("type", $kieu)->first()->items;
     }
 
     public function getRandomWeightedElement($weightedValues)
@@ -103,7 +104,7 @@ class TreeController extends Controller
         $rate       = [];
         $reward     = [];
         $wheel_item = [];
-        $items      = $this->getWheelItem();
+        $items      = $this->getWheelItem($type);
         foreach ($items as $item) {
             $wheel_item[] = $item->id;
             $label[]      = $item->item->name . " x" . $item->quantity;

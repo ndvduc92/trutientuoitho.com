@@ -9,6 +9,12 @@ $currentRoute = Route::currentRouteName();
         </a>
     </li>
 
+    <li class="sidebar-item {{ $currentRoute == 'changeClass' ? 'active' : null }}">
+        <a class='sidebar-link' href='/account/doi-mon-phai'>
+            <i class="align-middle me-2 fas fa-fw fa-exchange"></i> <span class="align-middle">Đổi Môn Phái</span>
+        </a>
+    </li>
+
     <li class="sidebar-item {{ $currentRoute == 'giftcodes' ? 'active' : null }}">
         <a class='sidebar-link' href='/account/giftcodes'>
             <i class="align-middle me-2 fas fa-fw fa-gift"></i> <span class="align-middle">Giftcode</span>

@@ -270,7 +270,7 @@ class AuthController extends Controller
 
     public function changeClassGet()
     {
-        return view("class");
+        return view("account.class");
     }
 
     public function title()
